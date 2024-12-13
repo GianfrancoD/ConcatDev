@@ -1,9 +1,38 @@
 import React from "react";
-// import logo from './logo.svg';
-// import "./App.css";
+import { Navbar } from "./modules/navbar/nav.tsx";
+import { Hero } from "./modules/heros/hero.tsx";
+import Services from "./modules/servis/servicios.tsx";
+import WhyOurServices from "./modules/ourServices/ourservices.tsx";
+import { WhyWebPresence } from "./modules/whyweb/presence.tsx";
+import Projects from "./modules/projects/project.tsx";
+import Stats from "./modules/star/stats.tsx";
+import Testimonials from "./modules/testimonials/testimonal.tsx";
+import { Footer } from "./modules/footer/footers.tsx";
 
 function App() {
-  return <div className="App">hola</div>;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#020617] via-[#0F172A] to-[#020617] text-white">
+      <nav>
+        <Navbar />
+      </nav>
+      <main>
+        <Hero />
+        <section>
+          <Services />
+          <article>
+            <WhyOurServices />
+            <WhyWebPresence />
+            <Projects />
+            <Stats />
+            <Testimonials />
+          </article>
+        </section>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
+  );
 }
 
 export default App;

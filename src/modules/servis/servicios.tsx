@@ -29,13 +29,16 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20">
+    <section
+      id="services"
+      className="py-20 bg-gradient-to-b from-[#020617] via-[#0F172A] to-[#0F172A]"
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-6 rounded-2xl bg-gradient-to-b from-white/10 to-white/5 hover:from-blue-500/10 hover:to-cyan-500/10 transition-all duration-300 backdrop-blur-sm border border-white/10 hover:border-blue-500/50"
+              className="group p-6 rounded-2xl bg-gradient-to-b from-[#1E293B] to-white/5 hover:from-blue-500/10 hover:to-cyan-500/10 transition-all duration-300 backdrop-blur-sm border border-white/10 hover:border-blue-500/50"
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center text-2xl mb-4">
                 {service.icon}

@@ -1,5 +1,5 @@
 import { useState, React } from "react";
-import Modal from "./modals/modal.tsx";
+import Modal from "../modals/projectModal/modal.tsx";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -8,7 +8,8 @@ export default function Projects() {
     {
       title: "E-commerce Platform",
       category: "Web Development",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_1280.jpg",
       description:
         "A fully responsive e-commerce platform with advanced features like real-time inventory management and personalized recommendations.",
       link: "https://example.com/ecommerce",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "./modules/navbar/nav.tsx";
-import { Hero } from "./modules/heros/hero.tsx";
+import Hero from "./modules/heros/hero.tsx";
 import Services from "./modules/servis/servicios.tsx";
 import WhyOurServices from "./modules/ourServices/ourservices.tsx";
 import { WhyWebPresence } from "./modules/whyweb/presence.tsx";
@@ -8,6 +8,8 @@ import Projects from "./modules/projects/project.tsx";
 import Stats from "./modules/star/stats.tsx";
 import Testimonials from "./modules/testimonials/testimonal.tsx";
 import { Footer } from "./modules/footer/footers.tsx";
+import AboutBrandAxion from "./modules/aboutbrandaxiom/aboutbrandaxiom.tsx";
+import ServicesPlan from "./modules/ServicesPlan/plan.tsx";
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
       </nav>
       <main>
         <Hero />
+        <Services />
+        <AboutBrandAxion />
+        <ServicesPlan />
         <section>
-          <Services />
           <article>
             <WhyOurServices />
             <WhyWebPresence />

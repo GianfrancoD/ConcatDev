@@ -1,5 +1,5 @@
 import React from "react";
-export const Hero = () => {
+export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -8,25 +8,34 @@ export const Hero = () => {
       </div>
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Elevate{" "}
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            Eleva tu{" "}
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              tu Branding
+              Branding
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Consultoría creativa creando marcas y experiencias exitosas.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105">
-              Empezar
-            </button>
-            <button className="px-8 py-3 rounded-full border border-gray-600 text-white font-medium hover:bg-white/10 transition-all">
-              Más información
-            </button>
+          <div className="relative mb-8">
+            <p className="text-xl sm:text-2xl text-blue-300 font-semibold mb-2 opacity-75">
+              Tu Marca, Nuestra Pasión
+            </p>
+            <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Innovación y Eficiencia Garantizadas
+            </p>
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400"></div>
           </div>
+          <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-[50vw] max-[768px]:max-w-[600vw] mx-auto">
+            Transformamos tu visión en una marca poderosa, combinando
+            creatividad innovadora con estrategias eficientes para un impacto
+            duradero en el mercado digital.
+          </p>
+          <a
+            href="#contact"
+            className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-lg font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105 inline-block"
+          >
+            Empieza tu viaje
+          </a>
         </div>
       </div>
     </section>
   );
-};
+}

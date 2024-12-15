@@ -8,7 +8,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-gradient-to-b from-[#0F172A] via-[#0F172A] ">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

@@ -10,6 +10,7 @@ import Testimonials from "./modules/testimonials/testimonal.tsx";
 import { Footer } from "./modules/footer/footers.tsx";
 import AboutBrandAxion from "./modules/aboutbrandaxiom/aboutbrandaxiom.tsx";
 import ServicesPlan from "./modules/ServicesPlan/plan.tsx";
+import AboutUs from "./modules/about/aboutUs.tsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Hero />
         <Services />
         <AboutBrandAxion />
+        <AboutUs />
         <ServicesPlan />
         <section>
           <article>

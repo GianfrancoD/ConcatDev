@@ -17,7 +17,8 @@ export default function Projects() {
     {
       title: "Brand Strategy",
       category: "Marketing",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_1280.jpg",
       description:
         "Comprehensive brand strategy development for a tech startup, including visual identity, messaging, and go-to-market plan.",
       link: "https://example.com/brand-strategy",
@@ -25,7 +26,8 @@ export default function Projects() {
     {
       title: "Mobile App",
       category: "Development",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_1280.jpg",
       description:
         "An innovative mobile app for health and wellness, featuring AI-powered personalized workout plans and nutrition tracking.",
       link: "https://example.com/mobile-app",
@@ -33,7 +35,8 @@ export default function Projects() {
     {
       title: "Digital Campaign",
       category: "Marketing",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_1280.jpg",
       description:
         "Multi-channel digital marketing campaign that increased client's customer acquisition by 150% within three months.",
       link: "https://example.com/digital-campaign",
@@ -41,7 +44,8 @@ export default function Projects() {
     {
       title: "UI/UX Design",
       category: "Design",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_1280.jpg",
       description:
         "Complete redesign of a SaaS platform's user interface, resulting in a 40% improvement in user engagement and retention.",
       link: "https://example.com/ui-ux-design",
@@ -57,7 +61,10 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-b from-[#0F172A] via-[#0F172A] to-[#0F172A]"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-2 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           Our Projects

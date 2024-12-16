@@ -2,27 +2,27 @@ import React from "react";
 
 const services = [
   {
-    title: "Brand Identity",
+    title: "Identidad de marca",
     description:
-      "Create a unique and memorable brand identity that resonates with your audience.",
+      "Cree una identidad de marca única y memorable que resuene con su audiencia.",
     icon: "Aa",
   },
   {
-    title: "Optimization",
+    title: "Optimización",
     description:
-      "Optimize your digital presence for maximum impact and conversion.",
+      "Optimice su presencia digital para lograr el máximo impacto y conversión.",
     icon: "⚡",
   },
   {
-    title: "Development",
+    title: "Desarrollo",
     description:
-      "Build scalable and modern web applications that drive results.",
+      "Cree aplicaciones web escalables y modernas que generen resultados.",
     icon: "⚙️",
   },
   {
     title: "Marketing",
     description:
-      "Strategic marketing campaigns that reach and engage your target market.",
+      "Campañas de marketing estratégicas que llegan e involucran a su mercado objetivo.",
     icon: "📈",
   },
 ];

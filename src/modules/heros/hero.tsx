@@ -3,8 +3,18 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 mix-blend-multiply" />
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#020617] to-transparent" />
+        <div className="absolute bg-black/50 w-[100vw] h-[100vh] z-50"></div>
+        <img
+          src="https://cdn.pixabay.com/photo/2018/02/08/10/22/desk-3139127_1280.jpg"
+          alt="Servicios de Marketing"
+          layout="fill"
+          objectFit="cover"
+          quality="100"
+          className="w-[100vw] h-auto max-[768px]:h-[90vh]"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20  to-cyan-600/20 mix-blend-multiply" />
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#020617] via-[#020617]/60  to-transparent" />
       </div>
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
         <div className="max-w-4xl mx-auto">

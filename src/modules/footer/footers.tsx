@@ -9,20 +9,27 @@ export const Footer = () => {
               BrandAxiom
             </h3>
             <p className="text-gray-400">
-              Creating exceptional digital experiences that drive results.
+              Creando experiencias digitales excepcionales que generan
+              resultados.
+            </p>
+            <p className="text-gray-500">
+              <b> Política de privacidad</b>
+            </p>
+            <p className="text-gray-500">
+              <b> Política de Cookies</b>
             </p>
           </div>
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <h4 className="text-white font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="/" className="hover:text-white transition-colors">
-                  Brand Identity
+                  Identidad de marca
                 </a>
               </li>
               <li>
                 <a href="/" className="hover:text-white transition-colors">
-                  Development
+                  Desarrollo
                 </a>
               </li>
               <li>
@@ -32,7 +39,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a href="/" className="hover:text-white transition-colors">
-                  Optimization
+                  Optimización
                 </a>
               </li>
             </ul>
@@ -65,16 +72,16 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>
+              {/* <li>
                 <a href="/" className="hover:text-white transition-colors">
                   Twitter
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="/" className="hover:text-white transition-colors">
                   LinkedIn
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/" className="hover:text-white transition-colors">
                   Instagram
@@ -90,8 +97,8 @@ export const Footer = () => {
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} BrandAxiom. All rights reserved by
-            Gianfranco Di Berardino.
+            &copy; {new Date().getFullYear()} BrandAxiom. Todos los derechos
+            reservados por Gianfranco Di Berardino.
           </p>
         </div>
       </div>

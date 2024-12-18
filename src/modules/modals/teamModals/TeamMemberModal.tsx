@@ -39,7 +39,7 @@ export default function TeamMemberModal({
           <p className="text-blue-400 text-lg mb-4">{member.role}</p>
           <p className="text-gray-300">
             {member.bio ||
-              `${member.name} is a key member of our team, bringing expertise and passion to their role as ${member.role}. Their contributions are vital to our success and the value we deliver to our clients.`}
+              `${member.name} es un miembro clave de nuestro equipo, que aporta experiencia y pasión a su función como ${member.role}. Sus contribuciones son vitales para nuestro éxito y el valor que ofrecemos a nuestros clientes.`}
           </p>
         </div>
       </div>

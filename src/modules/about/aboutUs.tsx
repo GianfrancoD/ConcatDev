@@ -5,27 +5,29 @@ import TeamMemberModal from "../modals/teamModals/TeamMemberModal.tsx";
 
 const teamMembers = [
   {
-    name: "Ana Rodríguez",
-    role: "CEO & Fundadora",
+    name: "Juan Smith",
+    role: "CEO, Founder, Developer FullStack",
     image:
       "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg",
   },
   {
     name: "Carlos Mendoza",
-    role: "Director de Estrategia",
+    role: "VP, Director de Estrategia",
     image:
       "https://cdn.pixabay.com/photo/2021/06/15/16/11/man-6339003_1280.jpg",
   },
-  //   {
-  //     name: "Laura Sánchez",
-  //     role: "Directora Creativa",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //   },
-  //   {
-  //     name: "Miguel Ángel Torres",
-  //     role: "Director de Tecnología",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //   },
+  {
+    name: "Laura Sánchez",
+    role: "Asistente Ejecutiva",
+    image:
+      "https://cdn.pixabay.com/photo/2016/11/19/14/51/drinking-1839680_1280.jpg",
+  },
+  {
+    name: "Miguel Ángel Torres",
+    role: "CMO, Director de Marketing",
+    // image: "/placeholder.svg?height=400&width=400",
+    image: "https://cdn.pixabay.com/photo/2015/01/12/10/45/man-597178_1280.jpg",
+  },
 ];
 
 const values = [

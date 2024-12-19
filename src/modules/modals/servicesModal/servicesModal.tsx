@@ -1,5 +1,6 @@
-import { Check, Wallet, X } from "lucide-react";
+import { Check, Library, Wallet, X } from "lucide-react";
 import React from "react";
+
 export const ServiceModal = ({ service, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 p-4">
@@ -32,7 +33,6 @@ export const ServiceModal = ({ service, onClose }) => {
                       {plan.price}
                     </span>
                   </div>
-
                   <div className="flex flex-wrap justify-between mb-3">
                     <h4 className="text-xl font-semibold text-white mb-0">
                       {plan.name}
@@ -43,7 +43,6 @@ export const ServiceModal = ({ service, onClose }) => {
                       </span>
                     )}
                   </div>
-
                   <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
                 <div className="p-6">
@@ -58,6 +57,11 @@ export const ServiceModal = ({ service, onClose }) => {
                       </li>
                     ))}
                   </ul>
+                  {plan.time && (
+                    <div className="bg-blue-500/20 px-3 py-3 mb-4">
+                      <p className="text-sm text-blue-300">{plan.time}</p>
+                    </div>
+                  )}
                   <button className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105">
                     Solicitar Cotización
                   </button>
@@ -65,6 +69,53 @@ export const ServiceModal = ({ service, onClose }) => {
               </div>
             ))}
           </div>
+
+          {service.title === "Web Dev" && (
+            <div className="mt-8 p-6 bg-[#0F172A]/50 rounded-lg border border-blue-500/20">
+              <div className="flex flex-row items-center mb-4">
+                <Library className="mr-3 w-6 h-6 -mt-4 text-blue-400" />
+
+                <h4 className="text-lg font-semibold text-white mb-4">
+                  Costos Adicionales
+                </h4>
+              </div>
+              <ul className="space-y-2 text-gray-300">
+                <li>
+                  <span className="font-semibold">Diseño</span>
+                </li>
+                <li>
+                  <span className="font-semibold">Hosting</span>{" "}
+                  <span className="bg-blue-500/90 text-white text-[60%] py-1 px-2 ml-5 rounded-3xl">
+                    Ya viene incluido
+                  </span>
+                </li>
+                <li>
+                  <span className="font-semibold">Dominio</span>{" "}
+                  <span className="bg-blue-500/90 text-white text-[60%] py-1 px-2 ml-4 rounded-3xl">
+                    Ya viene incluido
+                  </span>
+                </li>
+                <li>
+                  <span className="font-semibold">Gestión de Publicidad</span>{" "}
+                </li>
+                <li>
+                  <span className="font-semibold">Bases de Datos</span>
+                </li>
+                <li>
+                  <span className="font-semibold">Pasarela de Pago</span>
+                </li>
+                <li>
+                  <span className="font-semibold">Formularios Avanzados</span>{" "}
+                </li>
+                <li className="font-semibold">SEM</li>
+                <li className="font-semibold">SEO</li>
+              </ul>
+              <p className="mt-4 text-sm text-gray-400">
+                Nota: Los precios pueden variar según la complejidad del
+                proyecto y los requerimientos específicos.
+              </p>
+            </div>
+          )}
 
           <div className="mt-8 p-6 bg-[#0F172A]/50 rounded-lg border border-blue-500/20">
             <div className="flex items-center mb-4">
@@ -74,10 +125,9 @@ export const ServiceModal = ({ service, onClose }) => {
               </h4>
             </div>
             <p className="text-gray-300">
-              Es posible elegir los Template/Plantilla Desarrollado por la
-              empresa BrandAxiom para una implementación más rápida y
-              personalizada. El costo final dependerá de la complejidad del
-              proyecto y las funcionalidades adicionales requeridas.
+              {service.note.map((notes) => (
+                <span key={notes.id}>{notes.frase}</span>
+              ))}
             </p>
           </div>
         </div>

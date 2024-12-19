@@ -67,12 +67,18 @@ const services = [
         icon: <Rocket className="w-8 h-8 text-blue-400" />,
       },
     ],
+    note: [
+      {
+        frase:
+          "Los precios indicados son estimaciones base. El costo final puede ",
+      },
+    ],
   },
   {
     icon: <Code className="w-12 h-12 text-blue-400" />,
     title: "Web Dev",
     description:
-      "Creamos sitios web a medida, optimizados para conversión y con diseño responsive de última generación.",
+      "⚡️ Creamos sitios web a medida, optimizados para conversión y con diseño responsive de última generación.",
     plans: [
       {
         name: "Landing Page",
@@ -82,9 +88,13 @@ const services = [
         features: [
           "Diseño responsivo",
           "Formulario de contacto",
-          "Optimización para conversiones",
-          "Entrega en 7-10 días",
+          "Análisis de tráfico",
+          "Optimización SEO básica",
+          "Análisis de rendimiento mensual",
+          "Botones de contacto directo a WhatsApp",
+          "Hosting y dominio por 1 año",
         ],
+        time: "Tiempo estimado de entrega: 1-4 semanas",
         icon: <Layout className="w-8 h-8 text-blue-400" />,
       },
       {
@@ -94,10 +104,14 @@ const services = [
           "Desarrollo de un sitio web completo que represente la identidad de la empresa y sus servicios.",
         features: [
           "Hasta 5 páginas",
-          "Diseño personalizado",
-          "Optimización SEO básica",
-          "Panel de administración",
+          "Diseño responsivo",
+          "Optimización SEO",
+          "Capacitación en gestión del contenido",
+          "Integración con redes sociales",
+          "Reporte de clientes Mensual Basico",
+          "Hosting y dominio por 1 año",
         ],
+        time: "Tiempo estimado de entrega: 1-4 meses",
         icon: <Building2 className="w-8 h-8 text-blue-400" />,
       },
       {
@@ -109,8 +123,13 @@ const services = [
           "Hasta 5 páginas",
           "Formulario de contacto",
           "Optimización SEO",
-          "Soporte básico",
+          "Soporte Básico",
+          "Respuesta automática a formularios",
+          "Análisis de tráfico",
+          "Diseño responsivo",
+          "Hosting y dominio por 1 año",
         ],
+        time: "Tiempo estimado de entrega: 1-3 meses",
         icon: <FileText className="w-8 h-8 text-blue-400" />,
       },
       {
@@ -119,11 +138,18 @@ const services = [
         description:
           "Desarrollo de una tienda online con todas las funcionalidades necesarias para gestionar productos y pagos en línea.",
         features: [
-          "Tienda online completa",
-          "Gestión de inventarios",
-          "Pasarela de pagos",
           "Diseño responsivo",
+          "Carrito de compras",
+          "Integración con pasarela de pago (ej. Stripe, Paypal, etc)",
+          "Gestión básica de inventarios",
+          "Diseño responsivo",
+          "Capacitación sobre gestión de productos",
+          "Análisis mensual del rendimiento",
+          "Optimización SEO Avanzado",
+          "Entrega de informes mensuales",
+          "Hosting y dominio por 1 año",
         ],
+        time: "Tiempo estimado de entrega: 2-5 meses",
         icon: <ShoppingCart className="w-8 h-8 text-blue-400" />,
       },
       {
@@ -132,11 +158,16 @@ const services = [
         description:
           "Creación de un sistema para agendar citas o reservas con integración a pasarelas de pago.",
         features: [
-          "Sistema de reservas",
-          "Integración calendario",
-          "Pasarela de pagos",
-          "Panel administrativo",
+          "Diseño responsivo",
+          "Sistema de agendamiento",
+          "Integración con calendario y pasarela de pago",
+          "Notificaciones automáticas por email/SMS",
+          "Análisis mensual del uso del sistema",
+          "Optimización SEO Avanzado",
+          "Entrega de informes mensuales",
+          "Hosting y dominio por 1 año",
         ],
+        time: "Tiempo estimado de entrega: 1-6 meses",
         icon: <Calendar className="w-8 h-8 text-blue-400" />,
       },
       {
@@ -145,13 +176,66 @@ const services = [
         description:
           "Desarrollo personalizado de una aplicación web que cumpla con necesidades específicas del cliente.",
         features: [
-          "Desarrollo personalizado",
-          "APIs REST",
+          "Desarrollo completo",
+          "Soporte técnico inicial",
+          "Capacitación en el uso del software",
+          "Actualizaciones regulares según las necesidades del cliente",
           "Base de datos",
           "Optimización SEO",
           "Soporte técnico",
+          "Hosting y dominio por 1 año",
         ],
+        time: "Tiempo estimado de entrega: 4-12 meses",
         icon: <Laptop className="w-8 h-8 text-blue-400" />,
+      },
+    ],
+    note: [
+      {
+        id: 1,
+        frase:
+          "Los precios indicados son estimaciones base. El costo final puede ",
+      },
+      {
+        id: 2,
+        frase:
+          "variar según requerimientos específicos, complejidad del diseño, ",
+      },
+      {
+        id: 3,
+        frase:
+          "funcionalidades adicionales y volumen de contenido. Además,  puedes ",
+      },
+      {
+        id: 4,
+        frase: "elegir entre diversas plantillas desarrolladas por la empresa ",
+      },
+      {
+        id: 5,
+        frase:
+          "Brandaxiom para personalizar tu proyecto. Ofrecemos opciones de ",
+      },
+      {
+        id: 6,
+        frase:
+          "pago flexibles y paquetes de mantenimiento continuo. Contáctanos ",
+      },
+      {
+        id: 7,
+        frase:
+          "para una cotización personalizada que se ajuste a tus necesidades ",
+      },
+      {
+        id: 8,
+        frase:
+          "exactas. Esta versión mantiene la información original mientras ",
+      },
+      {
+        id: 9,
+        frase: "incorpora la opción de elegir plantillas, lo que puede ser ",
+      },
+      {
+        id: 10,
+        frase: "atractivo para los clientes.",
       },
     ],
   },
@@ -198,6 +282,12 @@ const services = [
           "Partnerships estratégicos",
         ],
         icon: <Database className="w-8 h-8 text-blue-400" />,
+      },
+    ],
+    note: [
+      {
+        frase:
+          "Los precios indicados son estimaciones base. El costo final puede ",
       },
     ],
   },

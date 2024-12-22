@@ -11,6 +11,7 @@ import { Footer } from "./modules/footer/footers.tsx";
 import AboutBrandAxion from "./modules/aboutbrandaxiom/aboutbrandaxiom.tsx";
 import ServicesPlan from "./modules/ServicesPlan/plan.tsx";
 import AboutUs from "./modules/about/aboutUs.tsx";
+import Blog from "./modules/blogs/blog.tsx";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <WhyWebPresence />
             <Projects />
             <Stats />
+            <Blog />
             <Testimonials />
           </article>
         </section>

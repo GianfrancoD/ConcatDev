@@ -20,7 +20,7 @@ export default function Modal({ project, onClose }: ModalProps) {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-64 object-cover"
+            className="w-full h-auto object-cover"
           />
           <button
             onClick={onClose}

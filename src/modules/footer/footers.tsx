@@ -1,13 +1,20 @@
 import React from "react";
+import logotipo from "../../assets/logobrandaxiom.png";
+
 export const Footer = () => {
   return (
-    <footer className="py-12 border-t border-white/10">
+    <footer className="py-12 border-t border-white/10" id="footer">
       <div className="container mx-auto px-4 max-[425px]:text-center">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+          <div className="max-[425px]:flex-col max-[425px]:flex max-[425px]:-mt-10">
+            {/* <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
               BrandAxiom
-            </h3>
+            </h3> */}
+            <img
+              src={logotipo}
+              alt=""
+              className="min-[425px]:h-[30vh] min-[425px]:w-auto min-[425px]:px-auto min-[425px]:-mt-10  max-[425px]:px-10"
+            />
             <p className="text-gray-400">
               Creando experiencias digitales excepcionales que generan
               resultados.
@@ -22,11 +29,11 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>
+              {/* <li>
                 <a href="/" className="hover:text-white transition-colors">
                   Identidad de marca
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/" className="hover:text-white transition-colors">
                   Desarrollo

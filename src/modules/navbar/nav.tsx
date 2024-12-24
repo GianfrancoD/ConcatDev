@@ -2,13 +2,25 @@
 
 import { useState, useEffect, React } from "react";
 
-import { Home, Briefcase, Layout, Phone, Menu, X } from "lucide-react";
+import {
+  Home,
+  Briefcase,
+  Layout,
+  Phone,
+  Menu,
+  X,
+  NotepadText,
+  PersonStanding,
+} from "lucide-react";
+import logo from "../../assets/logobrandaxiom.png";
 
 const navItems = [
-  { name: "Home", href: "#", icon: Home },
-  { name: "Services", href: "#services", icon: Briefcase },
-  { name: "Projects", href: "#projects", icon: Layout },
-  { name: "Contact", href: "#contact", icon: Phone },
+  { name: "Inicio", href: "#", icon: Home },
+  { name: "Servicios", href: "#servicios", icon: Briefcase },
+  { name: "Proyectos", href: "#projects", icon: Layout },
+  { name: "Blog", href: "#blog", icon: NotepadText },
+  { name: "Testimonios", href: "#testimonio", icon: PersonStanding },
+  { name: "Contactos", href: "#footer", icon: Phone },
 ];
 
 export const Navbar = () => {
@@ -32,12 +44,13 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0">
-            <a
+            {/* <a
               href="/"
               className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
             >
               BrandAxiom
-            </a>
+            </a> */}
+            <img src={logo} alt="" className="h-[15vh] w-auto" />
           </div>
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navItems.map((item) => (
@@ -53,7 +66,7 @@ export const Navbar = () => {
               href="#contact"
               className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all"
             >
-              Get Started
+              Empezar
             </a>
           </div>
           <div className="md:hidden">
@@ -74,7 +87,7 @@ export const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="flex items-center text-gray-300 hover:text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="flex items-center text-gray-300 hover:text-white hover:bg-white/10  px-3 py-2 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
               <item.icon className="mr-3 h-5 w-5" />
@@ -86,7 +99,7 @@ export const Navbar = () => {
             className="flex items-center justify-center px-4 py-2 rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all mt-4"
             onClick={() => setIsOpen(false)}
           >
-            Get Started
+            Empezar
           </a>
         </div>
       </div>

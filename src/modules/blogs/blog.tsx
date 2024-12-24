@@ -111,7 +111,7 @@ export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
   return (
-    <section className="py-20 ">
+    <section className="py-20 " id="blog">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           Nuestro Blog

@@ -10,7 +10,10 @@ export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-[#1E293B]  via-[#1E293B] to-[#0F172A]">
+    <section
+      className="relative py-20 bg-gradient-to-b from-[#1E293B]  via-[#1E293B] to-[#0F172A]"
+      id="servicios"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0F172A] to-transparent"></div>
       <div className="container mx-auto px-4 flex flex-col justify-center min-h-screen relative z-10">
         <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">

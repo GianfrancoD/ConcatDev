@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { X, User, Calendar, Clock } from "lucide-react";
+import { X, User, Calendar } from "lucide-react";
 import React from "react";
 import { BlogPost } from "../../blogs/interface/blogInteface";
 

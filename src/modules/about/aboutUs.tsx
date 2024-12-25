@@ -9,24 +9,119 @@ const teamMembers = [
     role: "CEO, Founder, Developer FullStack",
     image:
       "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg",
+    info: [
+      {
+        id: 1,
+        frases: "CEO, Fundados",
+      },
+    ],
+    skill: [
+      "TeamLeaders",
+      "Programador FullStack",
+      "Innovación Tecnológica",
+      "Liderazgo Empresarial",
+      "Marketing Digital",
+      "Análisis de Datos",
+    ],
   },
   {
     name: "Carlos Mendoza",
     role: "VP, Director de Estrategia",
     image:
       "https://cdn.pixabay.com/photo/2021/06/15/16/11/man-6339003_1280.jpg",
+    info: [
+      {
+        id: 1,
+        frases:
+          "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
+      },
+
+      {
+        id: 2,
+        frases:
+          "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
+      },
+
+      {
+        id: 3,
+        frases:
+          "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
+      },
+    ],
+    skill: [
+      "TeamLeaders",
+      "Programador FullStack",
+      "Innovación Tecnológica",
+      "Liderazgo Empresarial",
+      "Marketing Digital",
+      "Análisis de Datos",
+    ],
   },
   {
     name: "Laura Sánchez",
     role: "Asistente Ejecutiva",
     image:
       "https://cdn.pixabay.com/photo/2016/11/19/14/51/drinking-1839680_1280.jpg",
+    info: [
+      {
+        id: 1,
+        frases:
+          "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
+      },
+
+      {
+        id: 2,
+        frases:
+          "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
+      },
+
+      {
+        id: 3,
+        frases:
+          "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
+      },
+    ],
+    skill: [
+      "TeamLeaders",
+      "Programador FullStack",
+      "Innovación Tecnológica",
+      "Liderazgo Empresarial",
+      "Marketing Digital",
+      "Análisis de Datos",
+    ],
   },
   {
     name: "Miguel Ángel Torres",
     role: "CMO, Director de Marketing",
     // image: "/placeholder.svg?height=400&width=400",
     image: "https://cdn.pixabay.com/photo/2015/01/12/10/45/man-597178_1280.jpg",
+    info: [
+      {
+        id: 1,
+        frases:
+          "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
+      },
+
+      {
+        id: 2,
+        frases:
+          "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
+      },
+
+      {
+        id: 3,
+        frases:
+          "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
+      },
+    ],
+    skill: [
+      "TeamLeaders",
+      "Programador FullStack",
+      "Innovación Tecnológica",
+      "Liderazgo Empresarial",
+      "Marketing Digital",
+      "Análisis de Datos",
+    ],
   },
 ];
 

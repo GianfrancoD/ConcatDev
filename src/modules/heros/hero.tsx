@@ -1,15 +1,15 @@
 import React from "react";
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      id="/"
+    >
       <div className="absolute inset-0 z-0">
         <div className="absolute bg-black/50 w-[100vw] h-[100vh] z-50"></div>
         <img
           src="https://cdn.pixabay.com/photo/2018/02/08/10/22/desk-3139127_1280.jpg"
           alt="Servicios de Marketing"
-          layout="fill"
-          objectFit="cover"
-          quality="100"
           className="w-[100vw] h-auto max-[768px]:h-[90vh]"
         />
 
@@ -18,10 +18,10 @@ export default function Hero() {
       </div>
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight">
-            Eleva tu{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Branding
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight ">
+            {"<"} Tu Éxisto,{" "}
+            <span className="bg-gradient-to-r text-[60px] from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Nuestro Código {"/>"}
             </span>
           </h1>
           <div className="relative mb-8">
@@ -38,8 +38,27 @@ export default function Hero() {
             creatividad innovadora con estrategias eficientes para un impacto
             duradero en el mercado digital.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            {[
+              "Programación Web",
+              "Software a Medida",
+              "E-commerce",
+              "SEO",
+              "SEM",
+              "Social Ads",
+              "Aplicaciones Web",
+              "Analisis de Tráfico",
+            ].map((service, index) => (
+              <span
+                key={index}
+                className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium"
+              >
+                {service}
+              </span>
+            ))}
+          </div>
           <a
-            href="#contact"
+            href="#BrandAxiom"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-lg font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105 inline-block"
           >
             Empieza tu viaje

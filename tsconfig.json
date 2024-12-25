@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5", // Especifica el estándar de JavaScript que quieres usar
+    "module": "commonjs", // Especifica el sistema de módulos
+    "strict": false, // Habilita todas las verificaciones estrictas
+    "esModuleInterop": true, // Habilita la interoperabilidad entre módulos ES y CommonJS
+    "skipLibCheck": true, // Omite la verificación de tipos en archivos de declaración
+    "forceConsistentCasingInFileNames": true, // Asegura que los nombres de archivos sean consistentes
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*", "src/images.d.ts"], // Especifica qué archivos incluir en la compilación
+  "exclude": ["node_modules", "**/*.spec.ts"] // Especifica qué archivos excluir de la compilación
+}

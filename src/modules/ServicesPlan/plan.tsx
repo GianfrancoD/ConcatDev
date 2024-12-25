@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, React } from "react";
+import { useState } from "react";
+import React from "react";
 import ServiceModal from "../modals/servicesModal/servicesModal.tsx";
 import { services } from "./data/planData.tsx";
 

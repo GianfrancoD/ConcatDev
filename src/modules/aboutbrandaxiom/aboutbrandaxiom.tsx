@@ -30,7 +30,10 @@ const pillars = [
 
 export default function AboutBrandAxion() {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#0F172A] to-[#1E293B]">
+    <section
+      className="py-20 bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
+      id="BrandAxiom"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">

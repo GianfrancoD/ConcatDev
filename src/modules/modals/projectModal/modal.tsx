@@ -30,7 +30,9 @@ export default function Modal({ project, onClose }: ModalProps) {
           </button>
         </div>
         <div className="p-6">
-          <div className="text-sm text-blue-400 mb-2">{project.category}</div>
+          <div className="flex md:text-sm max-md:text-[13px] items-center justify-center text-sm text-blue-400 mb-2 bg-blue-400/10 px-3 py-1 rounded-full max-[425px]:w-[50vw] sm:w-[22vw] md:w-[22vw] lg:w-[16vw] xl:w-[12vw]">
+            <b>{project.category}</b>
+          </div>
           <h3 className="text-2xl font-bold mb-4 text-white">
             {project.title}
           </h3>
@@ -41,7 +43,7 @@ export default function Modal({ project, onClose }: ModalProps) {
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105"
           >
-            View Project
+            Ver Proyecto
           </a>
         </div>
       </div>

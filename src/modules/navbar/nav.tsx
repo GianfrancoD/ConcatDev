@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useEffect, React } from "react";
+import { useState, useEffect } from "react";
+import React from "react";
+import { scrollToAll } from "../scroll/allScroll.tsx";
 
 import {
   Home,
@@ -15,12 +17,12 @@ import {
 import logo from "../../assets/logobrandaxiom.png";
 
 const navItems = [
-  { name: "Inicio", href: "#", icon: Home },
-  { name: "Servicios", href: "#servicios", icon: Briefcase },
-  { name: "Proyectos", href: "#projects", icon: Layout },
-  { name: "Blog", href: "#blog", icon: NotepadText },
-  { name: "Testimonios", href: "#testimonio", icon: PersonStanding },
-  { name: "Contactos", href: "#footer", icon: Phone },
+  { name: "Inicio", href: "/", icon: Home },
+  { name: "Servicios", href: "servicios", icon: Briefcase },
+  { name: "Proyectos", href: "projects", icon: Layout },
+  { name: "Blog", href: "blog", icon: NotepadText },
+  { name: "Testimonios", href: "testimonio", icon: PersonStanding },
+  { name: "Contactos", href: "footer", icon: Phone },
 ];
 
 export const Navbar = () => {
@@ -56,8 +58,12 @@ export const Navbar = () => {
             {navItems.map((item) => (
               <a
                 key={item.name}
-                href={item.href}
+                href={`#${item.href}`}
                 className="text-sm text-gray-300 hover:text-white transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToAll(item.href);
+                }}
               >
                 {item.name}
               </a>
@@ -86,16 +92,20 @@ export const Navbar = () => {
           {navItems.map((item) => (
             <a
               key={item.name}
-              href={item.href}
+              href={`#${item.href}`}
               className="flex items-center text-gray-300 hover:text-white hover:bg-white/10  px-3 py-2 rounded-md text-base font-medium transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                setIsOpen(false);
+                scrollToAll(item.href);
+                e.preventDefault();
+              }}
             >
               <item.icon className="mr-3 h-5 w-5" />
               {item.name}
             </a>
           ))}
           <a
-            href="#contact"
+            href="contact"
             className="flex items-center justify-center px-4 py-2 rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all mt-4"
             onClick={() => setIsOpen(false)}
           >

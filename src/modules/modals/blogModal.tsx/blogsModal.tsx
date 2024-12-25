@@ -23,12 +23,7 @@ export default function BlogPostModal({ post, onClose }: BlogPostModalProps) {
         className="bg-[#1E293B] rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
       >
         <div className="relative h-48 max-[425px]:h-64 md:h-auto">
-          <img
-            src={post.imageUrl}
-            alt={post.title}
-            layout="fill"
-            objectFit="cover"
-          />
+          <img src={post.imageUrl} alt={post.title} />
           <button
             onClick={onClose}
             className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white bg-black bg-opacity-50 rounded-full p-1 sm:p-2 hover:bg-opacity-75 transition-all duration-200"

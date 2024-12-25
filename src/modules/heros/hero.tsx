@@ -51,7 +51,7 @@ export default function Hero() {
             ].map((service, index) => (
               <span
                 key={index}
-                className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium"
+                className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium max-md:hidden"
               >
                 {service}
               </span>

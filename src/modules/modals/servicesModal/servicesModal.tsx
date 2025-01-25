@@ -1,4 +1,4 @@
-import { Check, Library, Wallet, X } from "lucide-react";
+import { Check, ChevronRight, Library, Wallet, X } from "lucide-react";
 import React from "react";
 import { cost } from "./data/costData.tsx";
 
@@ -72,8 +72,9 @@ export const ServiceModal = ({ service, onClose }) => {
                       <p className="text-sm text-blue-300">{plan.time}</p>
                     </div>
                   )}
-                  <button className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105">
+                  <button className="w-full flex items-center justify-evenly px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105">
                     Solicitar Cotización
+                    <ChevronRight className="w-7 h-7 text-blue-500 mr-4" />
                   </button>
                 </div>
               </div>
@@ -103,7 +104,7 @@ export const ServiceModal = ({ service, onClose }) => {
                     )}
                     {items.required && (
                       <span className="bg-blue-500/20 text-blue-400 text-xs py-1 px-2 rounded-full">
-                        Requiere {items.required}
+                        {items.required}
                       </span>
                     )}
                   </div>

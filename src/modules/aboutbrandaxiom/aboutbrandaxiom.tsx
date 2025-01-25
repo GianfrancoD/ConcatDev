@@ -39,17 +39,29 @@ export default function AboutBrandAxion() {
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             ¿Qué es BrandAxion?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            BrandAxion es una filosofía revolucionaria que redefine el branding
+          <p className="text-xl text-gray-300 mb-8 leading-normal">
+            BrandAxion es una filosofía innovadora que redefine la Programación
+            Web y el Marketing Digital en la era contemporánea. Nos
+            especializamos en combinar la analítica avanzada con soluciones de
+            desarrollo web para ofrecer a las empresas herramientas efectivas
+            que no solo destacan, sino que también impulsan su crecimiento en el
+            entorno digital.
+            {/* BrandAxion es una filosofía revolucionaria que redefine el branding
             para la era digital. Combinamos la innovación creativa con la
             precisión estratégica para crear marcas que no solo destacan, sino
-            que lideran en sus industrias.
+            que lideran en sus industrias. */}
           </p>
-          <p className="text-lg text-gray-400">
-            Nuestra metodología única fusiona principios de diseño
+          <p className="text-lg text-gray-400 leading-normal">
+            Nuestra metodología única integra principios de diseño funcional,
+            tecnologías de vanguardia y un análisis profundo de datos para
+            establecer conexiones significativas entre las empresas y sus
+            audiencias. En BrandAxion, creemos que el éxito en el mundo digital
+            se basa en decisiones informadas, estrategias adaptativas y un
+            enfoque centrado en el usuario.
+            {/* Nuestra metodología única fusiona principios de diseño
             vanguardistas, tecnología de punta y análisis de datos profundos
             para forjar conexiones significativas entre las marcas y sus
-            audiencias.
+            audiencias. */}
           </p>
         </div>
 

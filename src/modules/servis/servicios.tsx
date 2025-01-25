@@ -2,10 +2,10 @@ import React from "react";
 
 const services = [
   {
-    title: "Identidad de marca",
+    title: "Analisis de Trafico",
     description:
-      "Cree una identidad de marca única y memorable que resuene con su audiencia.",
-    icon: "Aa",
+      "Mide el comportamientos de tus usuarios y optimiza tu estrategia digital para maximizar resultados.",
+    icon: "📊",
   },
   {
     title: "Optimización",

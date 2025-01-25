@@ -1,128 +1,128 @@
 import { Users, Lightbulb, Target, Rocket } from "lucide-react";
 
-import { useState, React } from "react";
+import { useState } from "react";
+import React from "react";
 import TeamMemberModal from "../modals/teamModals/TeamMemberModal.tsx";
 
 const teamMembers = [
   {
-    name: "Juan Smith",
-    role: "CEO, Founder, Developer FullStack",
+    name: "Gian",
+    role: "CEO, Founder",
     image:
       "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg",
     info: [
       {
         id: 1,
-        frases: "CEO, Fundados",
+        frases:
+          "Fundador de esta agencia de desarrollo de software como Programador fullstack con amplios conocimientos en el campo del Frontend y del Backend junto con Base de datos Relacionales.",
       },
     ],
     skill: [
-      "TeamLeaders",
       "Programador FullStack",
       "Innovación Tecnológica",
       "Liderazgo Empresarial",
-      "Marketing Digital",
-      "Análisis de Datos",
+      "Análisis de Trafico",
     ],
   },
-  {
-    name: "Carlos Mendoza",
-    role: "VP, Director de Estrategia",
-    image:
-      "https://cdn.pixabay.com/photo/2021/06/15/16/11/man-6339003_1280.jpg",
-    info: [
-      {
-        id: 1,
-        frases:
-          "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
-      },
+  // {
+  //   name: "Carlos Mendoza",
+  //   role: "VP, Director de Estrategia",
+  //   image:
+  //     "https://cdn.pixabay.com/photo/2021/06/15/16/11/man-6339003_1280.jpg",
+  //   info: [
+  //     {
+  //       id: 1,
+  //       frases:
+  //         "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
+  //     },
 
-      {
-        id: 2,
-        frases:
-          "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
-      },
+  //     {
+  //       id: 2,
+  //       frases:
+  //         "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
+  //     },
 
-      {
-        id: 3,
-        frases:
-          "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
-      },
-    ],
-    skill: [
-      "TeamLeaders",
-      "Programador FullStack",
-      "Innovación Tecnológica",
-      "Liderazgo Empresarial",
-      "Marketing Digital",
-      "Análisis de Datos",
-    ],
-  },
-  {
-    name: "Laura Sánchez",
-    role: "Asistente Ejecutiva",
-    image:
-      "https://cdn.pixabay.com/photo/2016/11/19/14/51/drinking-1839680_1280.jpg",
-    info: [
-      {
-        id: 1,
-        frases:
-          "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
-      },
+  //     {
+  //       id: 3,
+  //       frases:
+  //         "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
+  //     },
+  //   ],
+  //   skill: [
+  //     "TeamLeaders",
+  //     "Programador FullStack",
+  //     "Innovación Tecnológica",
+  //     "Liderazgo Empresarial",
+  //     "Marketing Digital",
+  //     "Análisis de Datos",
+  //   ],
+  // },
+  // {
+  //   name: "Laura Sánchez",
+  //   role: "Asistente Ejecutiva",
+  //   image:
+  //     "https://cdn.pixabay.com/photo/2016/11/19/14/51/drinking-1839680_1280.jpg",
+  //   info: [
+  //     {
+  //       id: 1,
+  //       frases:
+  //         "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
+  //     },
 
-      {
-        id: 2,
-        frases:
-          "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
-      },
+  //     {
+  //       id: 2,
+  //       frases:
+  //         "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
+  //     },
 
-      {
-        id: 3,
-        frases:
-          "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
-      },
-    ],
-    skill: [
-      "TeamLeaders",
-      "Programador FullStack",
-      "Innovación Tecnológica",
-      "Liderazgo Empresarial",
-      "Marketing Digital",
-      "Análisis de Datos",
-    ],
-  },
-  {
-    name: "Miguel Ángel Torres",
-    role: "CMO, Director de Marketing",
-    // image: "/placeholder.svg?height=400&width=400",
-    image: "https://cdn.pixabay.com/photo/2015/01/12/10/45/man-597178_1280.jpg",
-    info: [
-      {
-        id: 1,
-        frases:
-          "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
-      },
+  //     {
+  //       id: 3,
+  //       frases:
+  //         "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
+  //     },
+  //   ],
+  //   skill: [
+  //     "TeamLeaders",
+  //     "Programador FullStack",
+  //     "Innovación Tecnológica",
+  //     "Liderazgo Empresarial",
+  //     "Marketing Digital",
+  //     "Análisis de Datos",
+  //   ],
+  // },
+  // {
+  //   name: "Miguel Ángel Torres",
+  //   role: "CMO, Director de Marketing",
+  //   // image: "/placeholder.svg?height=400&width=400",
+  //   image: "https://cdn.pixabay.com/photo/2015/01/12/10/45/man-597178_1280.jpg",
+  //   info: [
+  //     {
+  //       id: 1,
+  //       frases:
+  //         "Ana Rodríguez is a key member of our team, bringing expertise and passion to their role as CEO & Fundadora. Their contributions are vital to our success and the value we deliver to our clients.",
+  //     },
 
-      {
-        id: 2,
-        frases:
-          "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
-      },
+  //     {
+  //       id: 2,
+  //       frases:
+  //         "Graduada en Ingeniería Informática y con un MBA en Marketing Digital, Ana Rodríguez combina expertamente la tecnología con estrategias de negocio vanguardistas. Su enfoque en la innovación continua y la excelencia operativa ha llevado a BrandAxiom a experimentar un crecimiento anual sostenido del 30% en los últimos 5 años.",
+  //     },
 
-      {
-        id: 3,
-        frases:
-          "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
-      },
-    ],
-    skill: [
-      "TeamLeaders",
-      "Programador FullStack",
-      "Innovación Tecnológica",
-      "Liderazgo Empresarial",
-      "Marketing Digital",
-      "Análisis de Datos",
-    ],
-  },
+  //     {
+  //       id: 3,
+  //       frases:
+  //         "Bajo su liderazgo, BrandAxiom ha sido reconocida con varios premios de la industria, incluyendo el 'Premio a la Innovación en Marketing Digital' en 2022 y el 'Mejor Lugar para Trabajar en Tech' por tres años consecutivos.",
+  //     },
+  //   ],
+  //   skill: [
+  //     "TeamLeaders",
+  //     "Programador FullStack",
+  //     "Innovación Tecnológica",
+  //     "Liderazgo Empresarial",
+  //     "Marketing Digital",
+  //     "Análisis de Datos",
+  //   ],
+  // },
 ];
 
 const values = [
@@ -167,10 +167,14 @@ export default function AboutUs() {
 
         <div className="mb-16">
           <p className="text-xl text-gray-300 text-center mb-8 max-w-3xl mx-auto">
-            En BrandAxiom, somos un equipo apasionado de expertos en marketing
-            digital, diseño y tecnología. Nuestra misión es impulsar el
-            crecimiento de tu negocio a través de estrategias innovadoras y
-            soluciones creativas.
+            En BrandAxiom, somos un equipo apasionado de expertos en desarrollo
+            de software, y tecnología digital. Nuestra misión es impulsar el
+            crecimiento de tu negocio a través de soluciones innovadoras y
+            estrategias creativas que integran el desarrollo web con un análisis
+            exhaustivo del tráfico.{" "}
+            <span className="border-b-2 border-blue-400">
+              No creamos paginas web, Creamos Experiencias.
+            </span>
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -184,8 +188,6 @@ export default function AboutUs() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    layout="fill"
-                    objectFit="cover"
                     className="transition-transform duration-300 hover:scale-110"
                   />
                 </div>

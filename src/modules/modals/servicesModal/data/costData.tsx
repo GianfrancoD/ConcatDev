@@ -1,55 +1,59 @@
 import { CostAditional } from "../interfaces/costAdicional.tsx";
 
 export const cost: CostAditional[] = [
-  { label: "Diseño", included: false },
+  { label: "Diseño Moderno", included: true },
   { label: "Hosting", included: true },
   { label: "Dominio", included: true },
   { label: "Publicidad Paga (ADS)", included: false },
   {
     label: "Carrito de compras",
     included: false,
-    required: "Base de Datos",
   },
   {
     label: "Formulario de Registro y Login de usuarios",
     included: false,
-    required: "Base de Datos",
   },
   {
     label: "Pasarela de Pago",
     included: false,
-    required: "Base de Datos",
   },
   {
     label: "Formularios de Contacto",
     included: false,
-    required: "Base de Datos",
   },
+  { label: "SEO (Posicionamiento Orgánico)", included: true },
   { label: "SEM (Posicionamiento Pago)", included: false },
-  { label: "SEO (Posicionamiento Orgánico)", included: false },
   {
     label: "Reservas y Agendamientos",
     included: false,
-    required: "Base de datos",
   },
   {
     label: "Comentarios y Reseñas",
     included: false,
-    required: "Base de datos",
   },
   {
     label: "Encuestas y Feedback",
     included: false,
-    required: "Base de datos",
   },
   {
     label: "Notificaciones automáticas por email o SMS,",
     included: false,
-    required: "Base de datos",
   },
   {
     label: "Integración con redes sociales",
     included: false,
-    required: "Base de datos",
   },
+  {
+    label: "Integracion para Google Maps",
+    included: false,
+  },
+  {
+    label: "Chat Online o Boton de WhatsApp",
+    included: false,
+  },
+  {
+    label: "Reporte mensual de análisis de tráfico",
+    included: true,
+  },
+  { label: "Entregas de informes Mensual", included: true },
 ];

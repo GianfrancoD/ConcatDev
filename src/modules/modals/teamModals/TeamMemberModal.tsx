@@ -30,9 +30,7 @@ export default function TeamMemberModal({
           <img
             src={member.image}
             alt={member.name}
-            layout="fill"
-            objectFit="cover"
-            className="py-0 px-0 h-[35vh] w-full max-md:h-[25vh] sm:h-[33vh]"
+            className="py-0 px-0 h-[35vh] w-full max-md:h-[24vh] sm:h-[17.5rem]"
           />
           <button
             onClick={onClose}

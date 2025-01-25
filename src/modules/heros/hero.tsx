@@ -6,10 +6,10 @@ export default function Hero() {
       id="/"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute bg-black/50 w-[100vw] h-[100vh] z-50"></div>
+        <div className="absolute bg-black/50 w-[100vw] h-[100rem] z-50"></div>
         <img
           src="https://cdn.pixabay.com/photo/2018/02/08/10/22/desk-3139127_1280.jpg"
-          alt="Servicios de Marketing"
+          alt="Marketing Digital"
           className="w-[100vw] h-auto max-[768px]:h-[90vh]"
         />
 
@@ -24,7 +24,7 @@ export default function Hero() {
               Nuestro Código {"/>"}
             </span>
           </h1>
-          <div className="relative mb-8">
+          <h2 className="relative mb-8">
             <p className="text-xl sm:text-2xl text-blue-300 font-semibold mb-2 opacity-75">
               Tu Marca, Nuestra Pasión
             </p>
@@ -32,12 +32,20 @@ export default function Hero() {
               Innovación y Eficiencia Garantizadas
             </p>
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400"></div>
+          </h2>
+          <div className="relative mb-4">
+            <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-[50vw] max-[768px]:max-w-[600vw] mx-auto">
+              Potenciamos tu Presencia Digital con Programación Web y Marketing
+              Analítico, transformando datos en estrategias efectivas que
+              optimizan tu rendimiento online. <br />
+              <span className="text-lg text-gray-200 bg-gradient-to-r from-blue-500/60 via-violet-500/40 to-blue-500/20 py-2 px-4 rounded-full inline-flex mt-4">
+                No solo creamos sitios web, sino que realizamos experiencias
+                personalizadas que conectan con tu audiencia y maximizan el
+                retorno de inversión.
+              </span>
+            </p>
           </div>
-          <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-[50vw] max-[768px]:max-w-[600vw] mx-auto">
-            Transformamos tu visión en una marca poderosa, combinando
-            creatividad innovadora con estrategias eficientes para un impacto
-            duradero en el mercado digital.
-          </p>
+
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             {[
               "Programación Web",

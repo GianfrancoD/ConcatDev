@@ -91,7 +91,7 @@ export const services = [
   //   ],
   // },
   {
-    icon: <Code className="w-12 h-12 text-blue-400" />,
+    icon: <Code className="w-12 h-12 text-[#FCAE60]" />,
     title: "Web Dev",
     description:
       "⚡️ Creamos Paginas web a medidas, Optimizados para conversión, Diseño personalizado, Optimizado para un alto Rendimiento y Adaptados a dispotivos moviles.",

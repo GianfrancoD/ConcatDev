@@ -53,16 +53,19 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24" id="testimonio">
+    <section
+      className="py-24 bg-gradient-to-t from-[#1a1438] to-[#312760]"
+      id="testimonio"
+    >
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent">
           Testimonios de Clientes
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between border-[#FCAE60] border-x-[#FF8FB1] border"
             >
               <div>
                 <p className="text-gray-300 mb-6 italic text-lg">
@@ -73,13 +76,13 @@ export default function Testimonials() {
                 <img
                   src={testimonial.image}
                   alt={testimonial.author}
-                  className="w-12 h-12 object-cover rounded-full mr-4 border-2 border-blue-400"
+                  className="w-12 h-12 object-cover rounded-full mr-4 border-2 border-orange-500"
                 />
                 <div>
                   <div className="font-semibold text-white">
                     {testimonial.author}
                   </div>
-                  <div className="text-sm text-blue-400">
+                  <div className="text-sm bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent">
                     {testimonial.position}
                   </div>
                 </div>

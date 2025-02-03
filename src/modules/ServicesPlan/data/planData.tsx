@@ -115,7 +115,7 @@ export const services = [
           "Hosting y dominio (.com) por 1 año",
         ],
         time: "Tiempo estimado de entrega: 1-3 meses",
-        icon: <Layout className="w-8 h-8 text-blue-400" />,
+        icon: <Layout className="w-8 h-8 text-[#FF8FB1]" />,
       },
       {
         name: "Página Corporativa",
@@ -135,7 +135,7 @@ export const services = [
           "Hosting y dominio (.com) por 1 año",
         ],
         time: "Tiempo estimado de entrega: 1-4 meses",
-        icon: <Building2 className="w-8 h-8 text-blue-400" />,
+        icon: <Building2 className="w-8 h-8 text-[#FF8FB1]" />,
       },
       {
         name: "Página Informativa",
@@ -155,7 +155,7 @@ export const services = [
           "Hosting y dominio (.com) por 1 año",
         ],
         time: "Tiempo estimado de entrega: 1-3 meses",
-        icon: <FileText className="w-8 h-8 text-blue-400" />,
+        icon: <FileText className="w-8 h-8 text-[#FF8FB1]" />,
       },
       {
         name: "E-commerce",
@@ -180,7 +180,7 @@ export const services = [
           "Hosting y dominio (.com) por 1 año",
         ],
         time: "Tiempo estimado de entrega: 2-5 meses",
-        icon: <ShoppingCart className="w-8 h-8 text-blue-400" />,
+        icon: <ShoppingCart className="w-8 h-8 text-[#FF8FB1]" />,
       },
       {
         name: "Agendamiento",
@@ -200,7 +200,7 @@ export const services = [
           "Hosting y dominio (.com) por 1 año",
         ],
         time: "Tiempo estimado de entrega: 2-6 meses",
-        icon: <Calendar className="w-8 h-8 text-blue-400" />,
+        icon: <Calendar className="w-8 h-8 text-[#FF8FB1]" />,
       },
       {
         name: "Software (APP Web)",
@@ -221,7 +221,7 @@ export const services = [
           "Hosting y dominio (.com) por 1 año",
         ],
         time: "Tiempo estimado de entrega: 4-12 meses",
-        icon: <Laptop className="w-8 h-8 text-blue-400" />,
+        icon: <Laptop className="w-8 h-8 text-[#FF8FB1]" />,
       },
       {
         name: "Desarrollo Personalizado",
@@ -239,7 +239,7 @@ export const services = [
           "Hosting y dominio (.com) incluido por 1 año",
         ],
         time: "El tiempo estimado de entrega varía según la complejidad del proyecto.",
-        icon: <ShieldIcon className="w-8 h-8 text-blue-400" />,
+        icon: <ShieldIcon className="w-8 h-8 text-[#FF8FB1]" />,
       },
     ],
     note: [

@@ -20,7 +20,7 @@ export default function Services() {
         <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
           Nuestros Servicios
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           {services.map((service, index) => (
             <div
               key={index}

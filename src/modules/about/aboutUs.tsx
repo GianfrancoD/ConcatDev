@@ -194,7 +194,7 @@ export default function AboutUs() {
                 <h3 className="text-xl font-semibold text-white text-center mb-2">
                   {member.name}
                 </h3>
-                <p className="text-blue-400 text-center">{member.role}</p>
+                <p className="text-orange-300 text-center">{member.role}</p>
               </div>
             ))}
           </div>

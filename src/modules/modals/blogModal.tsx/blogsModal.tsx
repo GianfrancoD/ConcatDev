@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { X, User, Calendar } from "lucide-react";
+import { X, User, Calendar, Tag } from "lucide-react";
 import React from "react";
 import { BlogPost } from "../../blogs/interface/blogInteface";
 
@@ -32,7 +32,7 @@ export default function BlogPostModal({ post, onClose }: BlogPostModalProps) {
           </button>
         </div>
         <div className="p-4 sm:p-6 md:p-8">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-t from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent">
             {post.title}
           </h2>
           <div className="flex flex-wrap items-center text-gray-400 mb-6 text-sm sm:text-base">
@@ -60,8 +60,10 @@ export default function BlogPostModal({ post, onClose }: BlogPostModalProps) {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs sm:text-sm"
+                className="flex items-center bg-gradient-to-t from-[#fcae60] to-[#ff8fb1]/50 text-[#320760] px-2 py-1 rounded-full text-xs sm:text-sm"
               >
+                <Tag className="w-3 h-3 mr-1 my-1" />
+
                 {tag}
               </span>
             ))}

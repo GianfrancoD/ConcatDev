@@ -8,13 +8,13 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#0F172A] via-[#0F172A] ">
+    <section className="py-20 bg-gradient-to-b from-[#312760] to-[#1a1438] via-[#1a1438] ">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl mb-4">{stat.icon}</div>
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              <div className="text-4xl mb-4 ">{stat.icon}</div>
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
               <div className="text-sm text-gray-400">{stat.label}</div>

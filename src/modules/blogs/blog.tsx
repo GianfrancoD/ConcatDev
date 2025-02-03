@@ -208,12 +208,15 @@ export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
   return (
-    <section className="py-20 " id="blog">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+    <section
+      className="py-20 bg-gradient-to-t from-[#312760] to-[#1a1438]"
+      id="blog"
+    >
+      <div className="container mx-auto px-4 ">
+        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent">
           Nuestro Blog
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.id}
@@ -223,7 +226,7 @@ export default function Blog() {
               className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
               onClick={() => setSelectedPost(post)}
             >
-              <div className="relative h-58">
+              <div className="relative h-58 ">
                 <img
                   src={post.imageUrl}
                   alt={post.title}
@@ -232,7 +235,7 @@ export default function Blog() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-white">
+                <h3 className="text-xl font-semibold mb-2 text-orange-400">
                   {post.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{post.excerpt}</p>
@@ -248,7 +251,7 @@ export default function Blog() {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs flex items-center"
+                      className=" bg-gradient-to-t from-[#fcae60] to-[#ff8fb1]/50 text-[#320760] px-2 py-1 rounded-full text-xs flex items-center"
                     >
                       <Tag className="w-3 h-3 mr-1" />
                       {tag}

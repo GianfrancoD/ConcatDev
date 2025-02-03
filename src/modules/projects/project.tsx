@@ -66,10 +66,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-[#0F172A] via-[#0F172A] to-[#0F172A]"
+      className="py-20 bg-gradient-to-b from-[#1a1438] to-[#312760]"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-2 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-2 text-center bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent">
           Nuestras Proyectos
         </h2>
         <p className="text-xl text-gray-400 text-center mb-12">
@@ -88,13 +88,17 @@ export default function Projects() {
                 className="w-full aspect-auto object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <div className="text-sm text-blue-400 mb-2">
+                <div className="text-sm bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent mb-2">
                   {project.category}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 text-sm">Visualizar el proyecto</p>
+                <div className="border border-red-500 p-1.5 w-[12rem] bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] rounded-full">
+                  <p className="text-[#312760] font-semibold text-sm text-center">
+                    Visualizar el proyecto
+                  </p>
+                </div>
               </div>
             </div>
           ))}

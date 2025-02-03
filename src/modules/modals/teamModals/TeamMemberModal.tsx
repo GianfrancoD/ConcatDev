@@ -25,7 +25,7 @@ export default function TeamMemberModal({
 }: TeamMemberModalProps) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 p-4">
-      <div className="bg-[#1E293B] rounded-2xl w-full max-w-[90vw] sm:max-w-xl md:max-w-2xl max-h-[90vh] overflow-hidden shadow-2xl flex flex-col">
+      <div className="bg-[#312760] rounded-2xl w-full max-w-[90vw] sm:max-w-xl md:max-w-2xl max-h-[90vh] overflow-hidden shadow-2xl flex flex-col">
         <div className="relative h-48 sm:h-56 md:h-64 flex-shrink-0">
           <img
             src={member.image}
@@ -44,7 +44,7 @@ export default function TeamMemberModal({
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">
               {member.name}
             </h3>
-            <p className="text-blue-400 text-base sm:text-lg md:text-xl font-semibold">
+            <p className="text-orange-300 text-base sm:text-lg md:text-xl font-semibold">
               {member.role}
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function TeamMemberModal({
               {member.skill.map((allSkill, index) => (
                 <span
                   key={index}
-                  className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs sm:text-sm"
+                  className="bg-gradient-to-t from-[#fcae60] to-[#ff8fb1]/50 text-[#320760] px-2 py-1 rounded-full text-xs sm:text-sm"
                 >
                   {allSkill}
                 </span>

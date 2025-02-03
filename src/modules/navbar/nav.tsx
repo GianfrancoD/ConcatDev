@@ -40,7 +40,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#0F172A]/80 backdrop-blur-md" : "bg-transparent"
+        isScrolled ? "bg-[#312760]/80 backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export const Navbar = () => {
               <a
                 key={item.name}
                 href={`#${item.href}`}
-                className="text-sm text-gray-300 hover:text-white transition-colors"
+                className="text-sm text-orange-300  hover:text-orange-500 transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToAll(item.href);
@@ -70,7 +70,7 @@ export const Navbar = () => {
             ))}
             <a
               href="#contact"
-              className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all"
+              className="px-4 py-2 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 text-sm font-medium hover:from-[#ffa851] hover:to-[#ff6492] transition-all"
             >
               Empezar
             </a>
@@ -78,7 +78,7 @@ export const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-[#FCAE60] hover:text-white transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -88,12 +88,12 @@ export const Navbar = () => {
 
       {/* Mobile menu */}
       <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#0F172A]/95 backdrop-blur-md">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#312760] backdrop-blur-md">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={`#${item.href}`}
-              className="flex items-center text-gray-300 hover:text-white hover:bg-white/10  px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="flex items-center text-[#FCAE60] hover:text-[#FF8FB1] hover:bg-[#1A1438]  px-3 py-2 rounded-md text-base font-medium transition-colors"
               onClick={(e) => {
                 setIsOpen(false);
                 scrollToAll(item.href);
@@ -106,7 +106,7 @@ export const Navbar = () => {
           ))}
           <a
             href="contact"
-            className="flex items-center justify-center px-4 py-2 rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all mt-4"
+            className="flex items-center justify-center px-4 py-2 rounded-md bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all mt-4"
             onClick={() => setIsOpen(false)}
           >
             Empezar

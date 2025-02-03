@@ -13,36 +13,32 @@ export default function Hero() {
           className="w-[100vw] h-auto max-[768px]:h-[90vh]"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20  to-cyan-600/20 mix-blend-multiply" />
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#020617] via-[#020617]/60  to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20  to-cyan-600/20 mix-blend-multiply" /> */}
+        {/* <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-transparent" /> */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#FCAE60]/20 via-[#1A1438]/0 to-[#FF8FB1]/20 mix-blend-multiply" />
       </div>
-      <div className="relative z-10 container mx-auto px-4 py-32 text-center">
+      <div className="relative z-10 container mx-auto px-4 py-32 max-[1024px]:px-0 max-[1024px]:py-0 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight ">
             {"<"} Tu Éxisto,{" "}
-            <span className="bg-gradient-to-r text-[60px] from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent text-[60px]">
               Nuestro Código {"/>"}
             </span>
           </h1>
           <h2 className="relative mb-8">
-            <p className="text-xl sm:text-2xl text-blue-300 font-semibold mb-2 opacity-75">
+            <p className="text-xl sm:text-2xl text-orange-300 font-semibold mb-2 ">
               Tu Marca, Nuestra Pasión
             </p>
-            <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
               Innovación y Eficiencia Garantizadas
             </p>
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400"></div>
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-400 to-pink-400"></div>
           </h2>
           <div className="relative mb-4">
             <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-[50vw] max-[768px]:max-w-[600vw] mx-auto">
               Potenciamos tu Presencia Digital con Programación Web y Marketing
               Analítico, transformando datos en estrategias efectivas que
               optimizan tu rendimiento online. <br />
-              <span className="text-lg text-gray-200 bg-gradient-to-r from-blue-500/60 via-violet-500/40 to-blue-500/20 py-2 px-4 rounded-full inline-flex mt-4">
-                No solo creamos sitios web, sino que realizamos experiencias
-                personalizadas que conectan con tu audiencia y maximizan el
-                retorno de inversión.
-              </span>
             </p>
           </div>
 
@@ -67,7 +63,7 @@ export default function Hero() {
           </div>
           <a
             href="#BrandAxiom"
-            className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-lg font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105 inline-block"
+            className="px-8 py-4 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1]  text-[#312760] text-lg font-medium hover:from-[#ffa54b] hover:to-[#fa7da3]  hover:text-black transition-all transform hover:scale-105 inline-block"
           >
             Empieza tu viaje
           </a>

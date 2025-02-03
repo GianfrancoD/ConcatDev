@@ -3,13 +3,13 @@ import logotipo from "../../assets/logobrandaxiom.png";
 
 export const Footer = () => {
   return (
-    <footer className="py-12 border-t border-white/10" id="footer">
-      <div className="container mx-auto px-4 max-[425px]:text-center">
+    <footer
+      className="py-12 border-t border-white/10 bg-gradient-to-t from-[#312760] to-[#1a1438] "
+      id="footer"
+    >
+      <div className="container mx-auto px-4 max-[425px]:text-center ">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="max-[425px]:flex-col max-[425px]:flex max-[425px]:-mt-10">
-            {/* <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
-              BrandAxiom
-            </h3> */}
             <img
               src={logotipo}
               alt=""
@@ -19,21 +19,22 @@ export const Footer = () => {
               Creando experiencias digitales excepcionales que generan
               resultados.
             </p>
-            <p className="text-gray-500">
-              <b> Política de privacidad</b>
-            </p>
-            <p className="text-gray-500">
-              <b> Política de Cookies</b>
-            </p>
+            <a
+              href="/"
+              className="text-gray-500 bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent"
+            >
+              <span> Política de privacidad</span>
+            </a>
+            {/* <a
+              href="/"
+              className="text-gray-500 bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent"
+            >
+              <span> Política de Cookies</span>
+            </a> */}
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">Servicios</h4>
-            <ul className="space-y-2 text-gray-400">
-              {/* <li>
-                <a href="/" className="hover:text-white transition-colors">
-                  Identidad de marca
-                </a>
-              </li> */}
+            <ul className="space-y-2 text-orange-300">
               <li>
                 <a href="/" className="hover:text-white transition-colors">
                   Desarrollo
@@ -52,8 +53,8 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-white font-semibold mb-4">Navegación</h4>
+            <ul className="space-y-2 text-orange-300">
               <li>
                 <a href="/" className="hover:text-white transition-colors">
                   About
@@ -61,7 +62,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a href="/" className="hover:text-white transition-colors">
-                  Projects
+                  Proyectos
                 </a>
               </li>
               <li>
@@ -77,18 +78,8 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-semibold mb-4">Connect</h4>
-            <ul className="space-y-2 text-gray-400">
-              {/* <li>
-                <a href="/" className="hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </li> */}
-              {/* <li>
-                <a href="/" className="hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-              </li> */}
+            <h4 className="text-white font-semibold mb-4">Redes</h4>
+            <ul className="space-y-2 text-orange-300">
               <li>
                 <a href="/" className="hover:text-white transition-colors">
                   Instagram

@@ -3,25 +3,25 @@ import React from "react";
 
 const pillars = [
   {
-    icon: <Lightbulb className="w-6 h-6 text-blue-400" />,
+    icon: <Lightbulb className="w-6 h-6 text-orange-400" />,
     title: "Innovación Creativa",
     description:
       "Fusionamos ideas vanguardistas con estrategias probadas para crear marcas que destacan.",
   },
   {
-    icon: <Target className="w-6 h-6 text-blue-400" />,
+    icon: <Target className="w-6 h-6 text-orange-400" />,
     title: "Precisión Estratégica",
     description:
       "Cada decisión está respaldada por datos y alineada con los objetivos de tu negocio.",
   },
   {
-    icon: <Zap className="w-6 h-6 text-blue-400" />,
+    icon: <Zap className="w-6 h-6 text-orange-400" />,
     title: "Agilidad Digital",
     description:
       "Adaptamos rápidamente las estrategias para aprovechar las últimas tendencias del mercado.",
   },
   {
-    icon: <Layers className="w-6 h-6 text-blue-400" />,
+    icon: <Layers className="w-6 h-6 text-orange-400" />,
     title: "Experiencia Integral",
     description:
       "Ofrecemos soluciones completas que abarcan todos los aspectos del branding moderno.",
@@ -31,12 +31,12 @@ const pillars = [
 export default function AboutBrandAxion() {
   return (
     <section
-      className="py-20 bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
+      className="py-20 bg-gradient-to-b from-[#312760] to-[#1A1438]"
       id="BrandAxiom"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
             ¿Qué es BrandAxion?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-normal">
@@ -90,7 +90,7 @@ export default function AboutBrandAxion() {
           </p>
           <a
             href="#contact"
-            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105"
+            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 hover:text-gray-900  font-medium hover:from-[#ffa64d] hover:to-[#f7739a] transition-all transform hover:scale-105"
           >
             Descubre el poder de BrandAxiom
           </a>

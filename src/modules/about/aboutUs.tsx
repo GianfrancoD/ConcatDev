@@ -158,10 +158,10 @@ export default function AboutUs() {
   return (
     <section
       id="about-us"
-      className="py-20 bg-gradient-to-b from-[#1E293B] to-[#1E293B]"
+      className="py-20 bg-gradient-to-b from-[#1A1438] to-[#312760] "
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
           Quiénes Somos
         </h2>
 
@@ -172,7 +172,7 @@ export default function AboutUs() {
             crecimiento de tu negocio a través de soluciones innovadoras y
             estrategias creativas que integran el desarrollo web con un análisis
             exhaustivo del tráfico.{" "}
-            <span className="border-b-2 border-blue-400">
+            <span className="bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
               No creamos paginas web, Creamos Experiencias.
             </span>
           </p>
@@ -194,7 +194,7 @@ export default function AboutUs() {
                 <h3 className="text-xl font-semibold text-white text-center mb-2">
                   {member.name}
                 </h3>
-                <p className="text-blue-400 text-center">{member.role}</p>
+                <p className="text-orange-300 text-center">{member.role}</p>
               </div>
             ))}
           </div>

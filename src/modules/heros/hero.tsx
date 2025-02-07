@@ -36,7 +36,7 @@ export default function Hero() {
           </h2>
           <div className="relative mb-4">
             <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-[50vw] max-[768px]:max-w-[600vw] mx-auto">
-              Potenciamos tu Presencia Digital con Programación Web y Marketing
+              Potenciamos tu Presencia con Programación Web y Marketing
               Analítico, transformando datos en estrategias efectivas que
               optimizan tu rendimiento online. <br />
             </p>

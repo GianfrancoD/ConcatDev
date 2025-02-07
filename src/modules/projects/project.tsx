@@ -4,6 +4,7 @@ import Modal from "../modals/projectModal/modal.tsx";
 import dentixa from "../../assets/dentixa.png";
 import inmobiliaria from "../../assets/inmobiliaria.png";
 import zoom from "../../assets/zoom.png";
+import envioshd from "../../assets/envioshd.png";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -16,7 +17,7 @@ export default function Projects() {
       //   "https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_1280.jpg",
       image: dentixa,
       description:
-        "A fully responsive e-commerce platform with advanced features like real-time inventory management and personalized recommendations.",
+        "Dentixa es un software para odontologos creado para la facilidad de los clientes, dentistas y ahorrar tiempo. En la tecnologia se utilizo en el Frontend: ReactJS con Typescript, MaterialUI como tambien el consumo de APIS para hacer peticiones HTTP, en el Backend: se utilizo Python, Flask y como Base de datos PostgreSQL con ORM SQLAlchemy y Arquitectura de Software MVC",
       link: "https://dentixa-gestion.vercel.app/",
     },
     {
@@ -24,16 +25,24 @@ export default function Projects() {
       category: "Website Developer",
       image: inmobiliaria,
       description:
-        "Comprehensive brand strategy development for a tech startup, including visual identity, messaging, and go-to-market plan.",
+        "Se creo la leading page inmobiliaria especialmente pensado para personas que estan en el ramo de la inmobiliaria con la cual se le puede facilitar su trabajo con lo que se utilizo las Tecnologias ReactJS con Typescript con TailwindCSS, consumos de APIS y Screaming Architecture",
       link: "https://inmobiliaria-web-nine.vercel.app/",
     },
     {
-      title: "Leading Page Envios Internacionales",
+      title: "Leading Page Envios ZOOM",
       category: "Website Developer",
       image: zoom,
       description:
-        "An innovative mobile app for health and wellness, featuring AI-powered personalized workout plans and nutrition tracking.",
+        "En esta pagina es especialmente para ZOOM con la cual se puede hacer envios de paquetes y se puede hacer seguimiento de los mismos, con lo que se utilizo las Tecnologias ReactJS con Typescript con TailwindCSS, consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como tambien Escabilidad, Manenibilidad.",
       link: "https://www.envios-zoom.com/",
+    },
+    {
+      title: "Leading Page Envios HD",
+      category: "Website Developer",
+      image: envioshd,
+      description:
+        "Es una Leading Page especialmente para la Envioshd con una estructura identica a la de ZOOM. Uso de ReactJS con Typescript, TailwindCSS, Consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como tambien Escabilidad, Manenibilidad.",
+      link: "https://envios-hd.vercel.app/",
     },
     // {
     //   title: "Digital Campaign",

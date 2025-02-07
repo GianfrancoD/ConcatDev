@@ -167,14 +167,13 @@ export default function AboutUs() {
 
         <div className="mb-16">
           <p className="text-xl text-gray-300 text-center mb-8 max-w-3xl mx-auto">
-            En BrandAxiom, somos un equipo apasionado de expertos en desarrollo
-            de software, y tecnología digital. Nuestra misión es impulsar el
-            crecimiento de tu negocio a través de soluciones innovadoras y
-            estrategias creativas que integran el desarrollo web con un análisis
-            exhaustivo del tráfico.{" "}
+            En ConcatDev, somos expertos en desarrollo de software y tecnología
+            digital, apasionados por impulsar el crecimiento de tu negocio.{" "}
             <span className="bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
-              No creamos paginas web, Creamos Experiencias.
-            </span>
+              No creamos páginas web, sino experiencias innovadoras
+            </span>{" "}
+            y personalizadas que combinan desarrollo web con análisis
+            estratégico para un impacto máximo.{" "}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

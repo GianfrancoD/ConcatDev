@@ -95,7 +95,7 @@ export const Footer = () => {
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} BrandAxiom. Todos los derechos
+            &copy; {new Date().getFullYear()} ConcatDev. Todos los derechos
             reservados por Gianfranco Di Berardino.
           </p>
         </div>

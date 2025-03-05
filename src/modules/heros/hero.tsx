@@ -10,7 +10,7 @@ export default function Hero() {
         <img
           src="https://cdn.pixabay.com/photo/2018/02/08/10/22/desk-3139127_1280.jpg"
           alt="Marketing Digital"
-          className="w-[100vw] h-auto max-[768px]:h-[90vh]"
+          className="w-[100vw] h-full"
         />
 
         {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20  to-cyan-600/20 mix-blend-multiply" /> */}

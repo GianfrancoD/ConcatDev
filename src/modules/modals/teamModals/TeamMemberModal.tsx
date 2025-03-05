@@ -30,7 +30,7 @@ export default function TeamMemberModal({
           <img
             src={member.image}
             alt={member.name}
-            className="py-0 px-0 h-[35vh] w-full max-md:h-[24vh] sm:h-[17.5rem]"
+            className="py-0 px-0 h-full w-full object-cover "
           />
           <button
             onClick={onClose}
@@ -61,7 +61,7 @@ export default function TeamMemberModal({
                     className="text-gray-300 text-sm sm:text-base leading-relaxed"
                     key={fraseIndex}
                   >
-                    {member.name} {frase.frases}
+                    {frase.frases}
                   </li>
                 ))}
               </ul>

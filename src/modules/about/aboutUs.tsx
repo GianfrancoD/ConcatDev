@@ -3,18 +3,20 @@ import { Users, Lightbulb, Target, Rocket } from "lucide-react";
 import { useState } from "react";
 import React from "react";
 import TeamMemberModal from "../modals/teamModals/TeamMemberModal.tsx";
+// import fotos from "../../assets/fotos.jpeg";
 
 const teamMembers = [
   {
     name: "Gian",
-    role: "CEO, Founder",
+    role: "FullStack Developer | ReactJS & TS | Flask & PostgreSQL",
     image:
       "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg",
+    // fotos,
     info: [
       {
         id: 1,
         frases:
-          "Fundador de esta agencia de desarrollo de software como Programador fullstack con amplios conocimientos en el campo del Frontend y del Backend junto con Base de datos Relacionales.",
+          "Programador fullstack con amplios conocimientos en el campo del Frontend y del Backend junto con Base de datos Relacionales, siempre listo para nuevos retos, proyectos.",
       },
     ],
     skill: [
@@ -22,6 +24,9 @@ const teamMembers = [
       "Innovación Tecnológica",
       "Liderazgo Empresarial",
       "Análisis de Trafico",
+      "ReactJS & TS Development",
+      "PostgreSQL & Flask Development",
+      "Frontend & Backend Development",
     ],
   },
   // {
@@ -170,17 +175,17 @@ export default function AboutUs() {
             En ConcatDev, somos expertos en desarrollo de software y tecnología
             digital, apasionados por impulsar el crecimiento de tu negocio.{" "}
             <span className="bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
-              No creamos páginas web, sino experiencias innovadoras
+              No creamos páginas web, creamos experiencias de uso
             </span>{" "}
             y personalizadas que combinan desarrollo web con análisis
-            estratégico para un impacto máximo.{" "}
+            estratégico para un impacto máximo en Funcionabilidad.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className=" rounded-lg p-6 transition-all duration-300   hover:scale-105 cursor-pointer"
+                className=" rounded-lg p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
                 onClick={() => setSelectedMember(member)}
               >
                 <div className="relative w-auto h-40 mx-auto mb-4 overflow-hidden rounded-3xl">

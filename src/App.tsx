@@ -5,13 +5,14 @@ import Services from "./modules/servis/servicios.tsx";
 import WhyOurServices from "./modules/ourServices/ourservices.tsx";
 import { WhyWebPresence } from "./modules/whyweb/presence.tsx";
 import Projects from "./modules/projects/project.tsx";
-import Stats from "./modules/star/stats.tsx";
+// import Stats from "./modules/star/stats.tsx";
 import Testimonials from "./modules/testimonials/testimonal.tsx";
 import { Footer } from "./modules/footer/footers.tsx";
 import AboutBrandAxion from "./modules/aboutbrandaxiom/aboutbrandaxiom.tsx";
 import ServicesPlan from "./modules/ServicesPlan/plan.tsx";
 import AboutUs from "./modules/about/aboutUs.tsx";
 import Blog from "./modules/blogs/blog.tsx";
+import ComoTrabajamos from "./modules/star/How-we-work.tsx";
 
 function App() {
   return (
@@ -27,10 +28,10 @@ function App() {
         <ServicesPlan />
         <section>
           <article>
+            <ComoTrabajamos />
             <WhyOurServices />
             <WhyWebPresence />
             <Projects />
-            <Stats />
             <Blog />
             <Testimonials />
           </article>

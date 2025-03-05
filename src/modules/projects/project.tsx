@@ -33,16 +33,16 @@ export default function Projects() {
       category: "Website Developer",
       image: zoom,
       description:
-        "En esta pagina es especialmente para ZOOM con la cual se puede hacer envios de paquetes y se puede hacer seguimiento de los mismos, con lo que se utilizo las Tecnologias ReactJS con Typescript con TailwindCSS, consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como tambien Escabilidad, Manenibilidad.",
-      link: "https://www.envios-zoom.com/",
+        "En esta pagina es especialmente para ZOOM con la cual se puede hacer envios de paquetes y se puede hacer seguimiento de los mismos, con lo que se utilizo las Tecnologias ReactJS con Typescript y TailwindCSS para diseños personalizados, consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como tambien Escabilidad, Manenibilidad, y Reusabilidad, tambien se utilizo como base de datos PostgreSQL, y en el backend Flask y con ORM SQLAlchemy para un codigo mas limpio.",
+      link: "https://enviointernacionales.com/",
     },
     {
       title: "Leading Page Envios HD",
       category: "Website Developer",
       image: envioshd,
       description:
-        "Es una Leading Page especialmente para la Envioshd con una estructura identica a la de ZOOM. Uso de ReactJS con Typescript, TailwindCSS, Consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como tambien Escabilidad, Manenibilidad.",
-      link: "https://envios-hd.vercel.app/",
+        "Es una Leading Page especialmente para la Envioshd con una estructura identica a la de ZOOM pero con un diseño mas llamativo y diferente. Uso de ReactJS con Typescript, TailwindCSS, Consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como tambien Escabilidad, Manenibilidad y Reusabilidad",
+      link: "https://envioshd.com/",
     },
     // {
     //   title: "Digital Campaign",

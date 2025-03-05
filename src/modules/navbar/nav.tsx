@@ -14,7 +14,8 @@ import {
   NotepadText,
   PersonStanding,
 } from "lucide-react";
-import logo from "../../assets/logobrandaxiom.png";
+// import logo from "../../assets/logobrandaxiom.png";
+import logo from "../../assets/concatdev2.png";
 
 const navItems = [
   { name: "Inicio", href: "/", icon: Home },

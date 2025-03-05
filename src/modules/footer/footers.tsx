@@ -1,5 +1,5 @@
 import React from "react";
-import logotipo from "../../assets/logobrandaxiom.png";
+import logotipo from "../../assets/concatdev2.png";
 
 export const Footer = () => {
   return (

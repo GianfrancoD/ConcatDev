@@ -80,7 +80,7 @@ export default function AboutBrandAxion() {
             resultados reales.
           </p>
           <a
-            href="#contact"
+            href="https://wa.me/+584124122809"
             className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 hover:text-gray-900  font-medium hover:from-[#ffa64d] hover:to-[#f7739a] transition-all transform hover:scale-105"
           >
             Impulsa tu éxito con ConcatDev

@@ -65,7 +65,7 @@ export const WhyWebPresence = () => {
             segundo cuenta en el mundo online.
           </p>
           <a
-            href="#contact"
+            href="https://wa.me/+584124122809"
             className="inline-block px-8 py-3 bg-[#312760] text-[#fcae60] font-medium rounded-full hover:bg-[#1A1438] transition-all transform hover:scale-105"
           >
             Comienza tu viaje digital

@@ -48,12 +48,15 @@ export const cost: CostAditional[] = [
     included: false,
   },
   {
-    label: "Chat Online o Boton de WhatsApp",
+    label: "ChatBox",
     included: false,
   },
+  { label: "Boton de Whatsapp", included: false },
   {
     label: "Reporte mensual de análisis de tráfico",
     included: true,
   },
   { label: "Entregas de informes Mensual", included: true },
+  { label: "ChatBox con Integraciòn a Whatsapp", included: false },
+  { label: "Dashboard", included: false },
 ];

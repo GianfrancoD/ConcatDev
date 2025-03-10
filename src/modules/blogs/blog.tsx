@@ -1,6 +1,14 @@
-import { useState, React } from "react";
-import { motion } from "framer-motion";
-import { Tag, User } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Clock,
+  Link,
+  Tag,
+} from "lucide-react";
 import BlogPostModal from "../modals/blogModal.tsx/blogsModal.tsx";
 import { BlogPost } from "./interface/blogInteface.tsx";
 
@@ -206,67 +214,293 @@ Implementar estas estrategias de SEO te ayudará a mejorar tu visibilidad en los
 
 export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % blogPosts.length);
+  };
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + blogPosts.length) % blogPosts.length
+    );
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsAutoplay(false);
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      handleNext();
+    } else if (touchEndX.current - touchStartX.current > 50) {
+      handlePrev();
+    }
+
+    setTimeout(() => setIsAutoplay(true), 5000);
+  };
+
+  const openPost = (post: BlogPost) => {
+    setIsAutoplay(false);
+    setSelectedPost(post);
+  };
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isAutoplay) {
+      interval = setInterval(() => {
+        handleNext();
+      }, 5000);
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isAutoplay]);
+
+  const handleMouseEnter = () => {
+    setIsAutoplay(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsAutoplay(true);
+  };
+
+  // Obtener los posts visibles (anterior, actual y siguiente)
+  const visiblePosts = [
+    blogPosts[(currentIndex - 1 + blogPosts.length) % blogPosts.length],
+    blogPosts[currentIndex],
+    blogPosts[(currentIndex + 1) % blogPosts.length],
+  ];
 
   return (
     <section
-      className="py-20 bg-gradient-to-t from-[#312760] to-[#1a1438]"
+      className="py-20 bg-gradient-to-b from-[#312760] to-[#312760]"
       id="blog"
     >
-      <div className="container mx-auto px-4 ">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent">
-          Nuestro Blog
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-          {blogPosts.map((post, index) => (
+      <div className="container mx-auto px-4">
+        <div className="flex flex-row justify-center items-center mb-5 gap-2">
+          <h2 className="text-4xl font-bold  text-white">Nuestro</h2>
+          <p className="text-4xl font-bold bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] bg-clip-text text-transparent">
+            Blog
+          </p>
+        </div>
+
+        {/* Slider para pantallas medianas y grandes */}
+        <div
+          ref={sliderRef}
+          className="hidden md:block relative"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="overflow-hidden relative h-[550px]">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <AnimatePresence initial={false} custom={direction} mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  custom={direction}
+                  initial={{ opacity: 0, x: direction > 0 ? 300 : -300 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: direction > 0 ? -300 : 300 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="grid grid-cols-3 gap-8 w-full"
+                >
+                  {visiblePosts.map((post, index) => (
+                    <motion.div
+                      key={post.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className={`bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer border border-white/10 ${
+                        index
+                          ? "transform scale-110 z-10 shadow-[0_0_30px_rgba(252,174,96,0.15)]"
+                          : "opacity-70 hover:opacity-90"
+                      }`}
+                      onClick={() => openPost(post)}
+                      whileHover={{
+                        y: -10,
+                        boxShadow:
+                          "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)",
+                      }}
+                    >
+                      <div className="relative h-52 overflow-hidden">
+                        <img
+                          src={post.imageUrl || "/placeholder.svg"}
+                          alt={post.title}
+                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 flex items-center space-x-2">
+                          <span className="bg-orange-500/80 text-white text-xs px-2 py-1 rounded-full">
+                            {post.tags[0]}
+                          </span>
+                          <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full flex items-center">
+                            <Clock className="w-3 h-3 mr-1" />
+                            {post.readTime}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#fcae60] to-[#ff8fb1]">
+                          {post.title}
+                        </h3>
+                        <p className="text-gray-300 mb-4 line-clamp-2 text-sm">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex items-center text-sm text-gray-400 mt-6">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] flex items-center justify-center text-white font-bold mr-2">
+                            {post.author.charAt(0)}
+                          </div>
+                          <div>
+                            <p className="font-medium text-white">
+                              {post.author}
+                            </p>
+                            <p className="text-xs">
+                              {new Date(post.date).toLocaleDateString()}
+                            </p>
+                            {post.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="w-auto h-auto  text-white text-xs mx-1 rounded-full inline-block"
+                              >
+                                <Tag className="w-3 h-3 mr-1 inline-block" />
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-4 rounded-r-xl z-20 border border-white/20 transition-all hover:pl-6"
+            aria-label="Artículo anterior"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-4 rounded-l-xl z-20 border border-white/20 transition-all hover:pr-6"
+            aria-label="Artículo siguiente"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+
+          <div className="flex justify-center mt-8 gap-3">
+            {blogPosts.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setIsAutoplay(false);
+                  setDirection(index > currentIndex ? 1 : -1);
+                  setCurrentIndex(index);
+
+                  setTimeout(() => setIsAutoplay(true), 5000);
+                }}
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  currentIndex === index
+                    ? "bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] w-8"
+                    : "bg-gray-600 w-3 hover:bg-gray-400"
+                }`}
+                aria-label={`Ir al artículo ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Vista de tarjetas para móviles */}
+        <div className="md:hidden space-y-8">
+          {blogPosts.slice(0, 3).map((post, index) => (
             <motion.div
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
-              onClick={() => setSelectedPost(post)}
+              className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-white/10 hover:shadow-2xl transition-all duration-300 cursor-pointer"
+              onClick={() => openPost(post)}
             >
-              <div className="relative h-58 ">
+              <div className="relative h-52">
                 <img
-                  src={post.imageUrl}
+                  src={post.imageUrl || "/placeholder.svg"}
                   alt={post.title}
-                  layout="fill"
-                  objectFit="cover"
+                  className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 flex items-center space-x-2">
+                  <span className="bg-orange-500/80 text-white text-xs px-2 py-1 rounded-full">
+                    {post.tags[0]}
+                  </span>
+                  <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full flex items-center">
+                    <Clock className="w-3 h-3 mr-1" />
+                    {post.readTime}
+                  </span>
+                </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-orange-400">
+                <h3 className="text-xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#fcae60] to-[#ff8fb1]">
                   {post.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                <div className="flex items-center text-sm text-gray-400 mb-4">
-                  <User className="w-4 h-4 mr-2" />
-                  <span className="mr-4">{post.author}</span>
-                  {/* <Clock className="w-4 h-4 mr-2" /> */}
-                  <span>{new Date(post.date).toLocaleDateString()}</span>
-
-                  <span>{post.readTime}</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className=" bg-gradient-to-t from-[#fcae60] to-[#ff8fb1]/50 text-[#320760] px-2 py-1 rounded-full text-xs flex items-center"
-                    >
-                      <Tag className="w-3 h-3 mr-1" />
-                      {tag}
-                    </span>
-                  ))}
+                <div className="flex items-center text-sm text-gray-400 mt-6">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] flex items-center justify-center text-white font-bold mr-2">
+                    {post.author.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-medium text-white">{post.author}</p>
+                    <p className="text-xs">
+                      {new Date(post.date).toLocaleDateString()}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
           ))}
+          <div className="text-center mt-6">
+            <Link
+              href="/blog"
+              className="inline-flex items-center bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] text-[#1a1438] font-medium px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300"
+            >
+              Ver todos los artículos
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </div>
+
       {selectedPost && (
         <BlogPostModal
           post={selectedPost}
-          onClose={() => setSelectedPost(null)}
+          onClose={() => {
+            setSelectedPost(null);
+            setTimeout(() => setIsAutoplay(true), 1000);
+          }}
         />
       )}
     </section>

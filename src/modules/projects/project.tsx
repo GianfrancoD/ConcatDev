@@ -5,9 +5,9 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import {
   motion,
-  useScroll,
+  // useScroll,
   useTransform,
-  useSpring,
+  // useSpring,
   useMotionValue,
   useInView,
   AnimatePresence,
@@ -19,13 +19,13 @@ import {
   ChevronRight,
   ChevronLeft,
 } from "lucide-react";
+import { useMediaQuery } from "./hooks/useMediaQuery";
 
 // Importación de imágenes
 import dentixa from "../../assets/dentixa.png";
 import inmobiliaria from "../../assets/inmobiliaria.png";
 import zoom from "../../assets/zoom.png";
 import envioshd from "../../assets/envioshd.png";
-
 // Definición de la interfaz para los proyectos
 interface Project {
   id: string;
@@ -40,38 +40,18 @@ interface Project {
 }
 
 export default function ProjectsSlider() {
-  const [activeProject, setActiveProject] = useState<string>("1");
+  const [activeProject, setActiveProject] = useState<string>(null);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  useMediaQuery("(max-width: 768px)");
-  useMediaQuery("(max-width: 1024px)");
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isTablet = useMediaQuery("(max-width: 1024px)");
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  function useMediaQuery(query: string): boolean {
-    const [matches, setMatches] = useState(false);
-
-    useEffect(() => {
-      const media = window.matchMedia(query);
-      if (media.matches !== matches) {
-        setMatches(media.matches);
-      }
-
-      const listener = () => {
-        setMatches(media.matches);
-      };
-
-      media.addEventListener("change", listener);
-      return () => media.removeEventListener("change", listener);
-    }, [matches, query]);
-
-    return matches;
-  }
-
   // Referencia para el scroll horizontal
   const scrollRef = useRef<HTMLDivElement>(null);
-  const { scrollXProgress } = useScroll({ container: scrollRef });
-  const scaleX = useSpring(scrollXProgress, { stiffness: 100, damping: 30 });
+  // const { scrollXProgress } = useScroll({ container: scrollRef });
+  // const scaleX = useSpring(scrollXProgress, { stiffness: 100, damping: 30 });
 
   // Valores para animaciones basadas en cursor
   const mouseX = useMotionValue(0);
@@ -87,7 +67,7 @@ export default function ProjectsSlider() {
       description:
         "Dentixa es un software para odontólogos creado para la facilidad de los clientes, dentistas y ahorrar tiempo. En la tecnología se utilizó en el Frontend: ReactJS con Typescript, MaterialUI como también el consumo de APIS para hacer peticiones HTTP, en el Backend: se utilizó Python, Flask y como Base de datos PostgreSQL con ORM SQLAlchemy y Arquitectura de Software MVC",
       link: "https://dentixa-gestion.vercel.app/",
-      year: "2023",
+      year: "2024",
       technologies: [
         "React",
         "TypeScript",
@@ -108,7 +88,7 @@ export default function ProjectsSlider() {
       description:
         "Se creó la leading page inmobiliaria especialmente pensado para personas que están en el ramo de la inmobiliaria con la cual se le puede facilitar su trabajo con lo que se utilizó las Tecnologías ReactJS con Typescript con TailwindCSS, consumos de APIS y Screaming Architecture",
       link: "https://inmobiliaria-web-nine.vercel.app/",
-      year: "2023",
+      year: "2025",
       technologies: [
         "React",
         "TypeScript",
@@ -126,7 +106,7 @@ export default function ProjectsSlider() {
       description:
         "En esta página es especialmente para ZOOM con la cual se puede hacer envíos de paquetes y se puede hacer seguimiento de los mismos, con lo que se utilizó las Tecnologías ReactJS con Typescript y TailwindCSS para diseños personalizados, consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como también Escalabilidad, Mantenibilidad, y Reusabilidad, también se utilizó como base de datos PostgreSQL, y en el backend Flask y con ORM SQLAlchemy para un código más limpio.",
       link: "https://enviointernacionales.com/",
-      year: "2022",
+      year: "2025",
       technologies: [
         "React",
         "TypeScript",
@@ -146,7 +126,7 @@ export default function ProjectsSlider() {
       description:
         "Es una Leading Page especialmente para la Envioshd con una estructura idéntica a la de ZOOM pero con un diseño más llamativo y diferente. Uso de ReactJS con Typescript, TailwindCSS, Consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como también Escalabilidad, Mantenibilidad y Reusabilidad",
       link: "https://envioshd.com/",
-      year: "2022",
+      year: "2025",
       technologies: [
         "React",
         "TypeScript",
@@ -158,7 +138,6 @@ export default function ProjectsSlider() {
     },
   ];
 
-  // Función para manejar el movimiento del mouse
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
     const { left, top } = containerRef.current?.getBoundingClientRect() || {
@@ -169,7 +148,6 @@ export default function ProjectsSlider() {
     mouseY.set(clientY - top);
   };
 
-  // Función para navegar a un proyecto específico
   const navigateToProject = (id: string) => {
     setActiveProject(id);
     const projectElement = document.getElementById(`project-${id}`);
@@ -181,27 +159,23 @@ export default function ProjectsSlider() {
     }
   };
 
-  // Función para navegar al siguiente proyecto
   const navigateToNextProject = () => {
     const currentIndex = projects.findIndex((p) => p.id === activeProject);
     const nextIndex = (currentIndex + 1) % projects.length;
     navigateToProject(projects[nextIndex].id);
   };
 
-  // Función para navegar al proyecto anterior
   const navigateToPrevProject = () => {
     const currentIndex = projects.findIndex((p) => p.id === activeProject);
     const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
     navigateToProject(projects[prevIndex].id);
   };
 
-  // Función para abrir el modal con los detalles del proyecto
   const openProjectDetails = (project: Project) => {
     setSelectedProject(project);
     setShowModal(true);
   };
 
-  // Efecto para actualizar el proyecto activo basado en el scroll
   useEffect(() => {
     const handleScroll = () => {
       if (!scrollRef.current) return;
@@ -212,11 +186,10 @@ export default function ProjectsSlider() {
       );
 
       for (const element of projectElements) {
-        const HTMLElement = element as HTMLElement;
-        const { offsetLeft, offsetWidth } = HTMLElement;
+        const htmlElement = element as HTMLElement;
+        const { offsetLeft, offsetWidth } = htmlElement;
         const projectId = element.id.replace("project-", "");
 
-        // Si el elemento está en el centro aproximado de la vista
         if (
           scrollLeft >= offsetLeft - 200 &&
           scrollLeft < offsetLeft + offsetWidth - 200
@@ -233,7 +206,6 @@ export default function ProjectsSlider() {
       return () => scrollContainer.removeEventListener("scroll", handleScroll);
     }
   }, []);
-
   return (
     <section
       id="projects"
@@ -301,37 +273,48 @@ export default function ProjectsSlider() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <button
-              // href="/portfolio"
+            <Link
+              href="/portfolio"
               className="group flex items-center space-x-2 text-white hover:text-[#fcae60] transition-colors duration-300"
             >
               <span>Ver todos los proyectos</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </Link>
           </motion.div> */}
         </div>
 
         {/* Navegación de proyectos para escritorio */}
-        <div className="hidden md:flex mb-8 space-x-1">
+        {/* <div className="hidden md:flex mb-8 space-x-1"> */}
+        <div
+          className={`${isMobile ? "hidden" : "flex"} md:flex mb-8 space-x-1`}
+        >
           {projects.map((project) => (
             <motion.button
               key={project.id}
               onClick={() => navigateToProject(project.id)}
               className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeProject === project.id
-                  ? "bg-white text-[#0f0f13]"
+                  ? "bg-white text-[#1a1438]"
                   : "text-white/70 hover:text-white"
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {project.title}
+              {isTablet
+                ? project.title.substring(0, 12) + (project.title.length > 12)
+                  ? "..."
+                  : ""
+                : project.title}
             </motion.button>
           ))}
         </div>
 
         {/* Controles de navegación para móvil */}
-        <div className="flex md:hidden justify-between items-center mb-6">
+        <div
+          className={`${
+            isMobile ? "flex" : "hidden"
+          } justify-between items-center mb-6`}
+        >
           <button
             onClick={navigateToPrevProject}
             className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
@@ -360,7 +343,11 @@ export default function ProjectsSlider() {
           className="overflow-x-auto hide-scrollbar pb-8"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <div className="flex space-x-8 md:space-x-16 px-4 md:px-8 min-w-max">
+          <div
+            className={`flex ${
+              isMobile ? "space-x-6" : "space-x-8 md:space-x-16"
+            } px-4 md:px-8 min-w-max`}
+          >
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -380,7 +367,15 @@ export default function ProjectsSlider() {
         <div className="hidden md:block h-1 bg-white/10 rounded-full mt-4 mx-auto max-w-5xl">
           <motion.div
             className="h-full bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] rounded-full"
-            style={{ scaleX, transformOrigin: "0%" }}
+            style={{
+              width: `${
+                ((projects.findIndex((p) => p.id === activeProject) + 1) /
+                  projects.length) *
+                100
+              }%`,
+              transition: "width 0.5s ease-in-out",
+            }}
+            // style={{ scaleX, transformOrigin: "0%" }}
           />
         </div>
 
@@ -531,7 +526,7 @@ function ProjectCard({
           />
 
           {/* Overlay con gradiente */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f13] via-transparent to-transparent opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1438] via-transparent to-transparent opacity-100" />
 
           {/* Categoría */}
           <div className="absolute top-4 left-4 z-10">

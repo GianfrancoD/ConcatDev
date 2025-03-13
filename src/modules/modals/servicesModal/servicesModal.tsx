@@ -1,8 +1,10 @@
 import { Check, ChevronRight, Library, Wallet, X } from "lucide-react";
 import React from "react";
 import { cost } from "./data/costData.tsx";
+// import { useLanguageContext } from "../../../provider.tsx";
 
 export const ServiceModal = ({ service, onClose }) => {
+  // const { t } = useLanguageContext();
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 p-4">
       <div className="bg-[#312760] rounded-2xl w-full max-w-6xl overflow-hidden shadow-2xl">

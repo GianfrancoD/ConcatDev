@@ -10,9 +10,24 @@
     "language": "Language"
   },
   "hero": {
-    "title": "Innovative Digital Solutions",
-    "subtitle": "We design and develop exceptional digital experiences",
-    "cta": "Explore our projects"
+    "title": "Your Success",
+    "subtitle": "Our Code",
+    "tagline1": "Your Brand, Our Passion",
+    "tagline2": "Guaranteed Innovation and Efficiency",
+    "description": "We enhance your presence with Web Programming and Analytical Marketing, transforming data into effective strategies that optimize your online performance.",
+    "cta": "Start your journey",
+    "imageAlt": "Digital Marketing",
+    "services": {
+      "webDev": "Web Development",
+      "customSoftware": "Custom Software",
+      "ecommerce": "E-commerce",
+      "seo": "SEO",
+      "sem": "SEM",
+      "socialAds": "Social Ads",
+      "webApps": "Web Applications",
+      "trafficAnalysis": "Traffic Analysis"
+    },
+    "heroBt": { "btHero": "Start your journey" }
   },
   "projects": {
     "title": "Our Projects",
@@ -28,6 +43,412 @@
     "subtitle": "Explore our articles about trends, tips and best practices",
     "readMore": "Read more",
     "viewAll": "View all articles"
+  },
+  "services": {
+    "title": "Our Services",
+    "viewPlans": "View Plans",
+    "items": {
+      "trafficAnalysis": {
+        "title": "Traffic Analysis",
+        "description": "Measure your users' behavior and optimize your digital strategy to maximize results."
+      },
+      "optimization": {
+        "title": "Optimization",
+        "description": "Optimize your digital presence to achieve maximum impact and conversion."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Create scalable and modern web applications that generate results."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Strategic marketing campaigns that reach and engage your target market."
+      }
+    },
+    "servicesData": {
+      "webDev": {
+        "title": "Web Dev",
+        "description": "⚡️ We create custom web pages, optimized for conversion, with personalized design, high performance optimization, and adapted to mobile devices.",
+        "warning": "We don't use platforms like Wordpress, Prestashop, Shopify.",
+        "plans": {
+          "landingPage": {
+            "name": "Landing Page",
+            "price": "$430",
+            "description": "Design of a single page optimized for conversions, ideal for specific campaigns or promotions.",
+            "features": [
+              "Up to 1 - 4 pages",
+              "Copywriting",
+              "Mobile-responsive design",
+              "Custom design (UX/UI)",
+              "SEO optimization",
+              "WhatsApp buttons",
+              "Monthly report delivery",
+              "Contact form",
+              "Hosting and domain (.com) for 1 year"
+            ],
+            "time": "Estimated delivery time: 1-3 months",
+            "btService": "Request a quote"
+          },
+          "corporate": {
+            "name": "Corporate Website",
+            "price": "$470",
+            "description": "Development of a complete website that represents the company's identity and services.",
+            "features": [
+              "Up to 4 - 6 pages",
+              "Copywriting",
+              "Mobile-responsive design",
+              "Custom design (UX/UI)",
+              "SEO optimization",
+              "Social media integration",
+              "WhatsApp button",
+              "Hosting and domain (.com) for 1 year"
+            ],
+            "time": "Estimated delivery time: 1-4 months"
+          },
+          "informative": {
+            "name": "Informative Website",
+            "price": "$850",
+            "description": "Creation of an informative site that includes a form for contact or inquiries, with sufficient information and strategy to reach your target customer.",
+            "features": [
+              "Up to 4 - 8 pages",
+              "Copywriting",
+              "Mobile-responsive design",
+              "Custom design (UX/UI)",
+              "SEO optimization",
+              "Monthly performance analysis",
+              "Traffic analysis",
+              "Paid advertising (ADS)",
+              "Monthly traffic analysis report",
+              "Monthly report delivery",
+              "WhatsApp button",
+              "Hosting and domain (.com) for 1 year"
+            ],
+            "time": "Estimated delivery time: 1-3 months"
+          },
+          "ecommerce": {
+            "name": "E-commerce",
+            "price": "$4,675",
+            "description": "Development of an online store with all the necessary functionalities to manage products and online payments.",
+            "features": [
+              "Up to 5 - 8 pages",
+              "Copywriting",
+              "Mobile-responsive design",
+              "Custom design (UX/UI)",
+              "Shopping cart",
+              "Payment gateway integration (e.g., Stripe, Paypal, etc.)",
+              "Basic inventory management",
+              "Product management training",
+              "Monthly performance analysis",
+              "SEO optimization",
+              "SEM optimization",
+              "Paid advertising (ADS)",
+              "Traffic analysis",
+              "Monthly report delivery",
+              "Monthly traffic analysis report",
+              "WhatsApp button",
+              "Hosting and domain (.com) for 1 year"
+            ],
+            "time": "Estimated delivery time: 2-5 months"
+          },
+          "scheduling": {
+            "name": "Scheduling System",
+            "price": "$1,035",
+            "description": "Creation of a system to schedule appointments or reservations with payment gateway integration.",
+            "features": [
+              "Up to 3 - 5 pages",
+              "Copywriting",
+              "Mobile-responsive design",
+              "Custom design (UX/UI)",
+              "Scheduling system",
+              "Calendar and payment gateway integration",
+              "Automatic email or SMS notifications",
+              "Monthly system usage analysis",
+              "SEO optimization",
+              "Traffic analysis",
+              "Paid advertising (ADS)",
+              "Monthly report delivery",
+              "WhatsApp button",
+              "Hosting and domain (.com) for 1 year"
+            ],
+            "time": "Estimated delivery time: 2-6 months"
+          },
+          "software": {
+            "name": "Software (Web APP)",
+            "price": "$1,935",
+            "description": "Custom development of a web application that meets specific client needs.",
+            "features": [
+              "Up to 5 - 7 pages",
+              "Copywriting",
+              "Custom design (UX/UI)",
+              "Mobile-responsive design",
+              "Regular updates according to client needs",
+              "Paid advertising (ADS)",
+              "Technical support",
+              "ChatBox with WhatsApp integration",
+              "Hosting and domain (.com) for 1 year"
+            ],
+            "time": "Estimated delivery time: 4-12 months"
+          },
+          "custom": {
+            "name": "Custom Development",
+            "price": "Inquire",
+            "description": "We offer completely customized development that adapts to the specific needs of each client. The price will be determined based on the complexity and scope of the project.",
+            "features": [
+              "Custom design that reflects your brand identity",
+              "Responsive interface optimized for mobile devices",
+              "Periodic updates according to changing client needs",
+              "Database integration for efficient information management",
+              "SEO optimization to improve visibility in search engines",
+              "Paid advertising management (ADS) to maximize reach",
+              "Continuous technical support to resolve any issues",
+              "Hosting and domain (.com) included for 1 year"
+            ],
+            "time": "Estimated delivery time varies depending on project complexity."
+          }
+        },
+        "note": [
+          "Prices vary according to time requirements, ",
+          "specific requirements, design complexity, and additional ",
+          "functionalities. We offer flexible payment options and maintenance ",
+          "packages. Contact us for a personalized quote."
+        ]
+      }
+    }
+  },
+  "aboutBrandAxiom": {
+    "title": "What is ConcatDev?",
+    "description1": "ConcatDev is the strategic integration of Web Programming and Digital Marketing to drive your business growth in the digital era. We combine advanced analytics with cutting-edge web development to offer you effective tools that allow you to stand out and connect with your audience.",
+    "description2": "Our unique methodology is based on functional design, cutting-edge technology, and deep data analysis. At ConcatDev, we create meaningful connections between your company and your customers, transforming data into informed decisions and user-centered adaptive strategies.",
+    "pillars": {
+      "creativeInnovation": {
+        "title": "Creative Innovation",
+        "description": "We combine cutting-edge ideas with effective strategies to develop brands that truly stand out in the market."
+      },
+      "strategicPrecision": {
+        "title": "Strategic Precision",
+        "description": "Every decision we make is backed by solid data and aligned with your business's specific objectives, ensuring a clear and effective approach."
+      },
+      "digitalAgility": {
+        "title": "Digital Agility",
+        "description": "We quickly adapt to the latest market trends, adjusting our strategies to maximize your digital impact."
+      },
+      "comprehensiveExperience": {
+        "title": "Comprehensive Experience",
+        "description": "We offer complete solutions that cover all aspects of modern branding, from conceptualization to execution."
+      }
+    },
+    "finalDescription": "With concatDev we create innovative digital experiences that transform your brand and drive your growth. We adapt to the latest technologies to offer you tailored solutions that generate real results.",
+    "cta": "Boost your success with ConcatDev"
+  },
+  "servicesPlans": {
+    "title": "Our Services",
+    "viewPlans": "View Plans"
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "subtitle": "Our process is designed to ensure transparency, efficiency, and exceptional results in every project.",
+    "steps": {
+      "step1": {
+        "title": "Initial Consultation and Requirements Analysis",
+        "shortDescription": "We discuss your project to understand your goals and needs.",
+        "fullDescription": "We schedule a meeting to get to know your business in depth, analyze your current situation, and define the objectives you want to achieve."
+      },
+      "step2": {
+        "title": "Strategic Proposal and Planning",
+        "shortDescription": "We develop a personalized plan tailored to your needs.",
+        "fullDescription": "Based on the information collected, we design a detailed strategy that includes the project scope, methodology, timelines, and budget. We present this proposal to you for review and adjustments."
+      },
+      "step3": {
+        "title": "Project Design and Development",
+        "shortDescription": "We implement the agreed solutions with regular updates.",
+        "fullDescription": "Once the proposal is approved, we begin the design and development process. We maintain constant communication with periodic reviews to ensure that the project progresses as planned and meets your expectations."
+      },
+      "step4": {
+        "title": "Review, Adjustments, and Refinement",
+        "shortDescription": "We refine the project based on your feedback.",
+        "fullDescription": "We present the project for your detailed review. We collect your feedback and make the necessary adjustments."
+      },
+      "step5": {
+        "title": "Testing, Debugging, and Optimization",
+        "shortDescription": "We identify and correct technical errors.",
+        "fullDescription": "We perform unit, integration, and performance tests. We identify and correct any errors found during testing to ensure a stable and efficient product."
+      },
+      "step6": {
+        "title": "Launch and Continuous Support",
+        "shortDescription": "We implement the final solution and provide continuous support.",
+        "fullDescription": "We officially launch your project and offer training on its use. Additionally, we provide continuous technical support and advice to maximize results and adapt to new needs that may arise."
+      }
+    },
+    "cta": "Start your project with us"
+  },
+  "whyOurServices": {
+    "title": "Why do you need our services?",
+    "subtitle": "In the digital era, standing out is essential. Our services not only help you excel but transform your online presence into a growth engine for your business.",
+    "reasons": {
+      "constantInnovation": {
+        "title": "Constant Innovation",
+        "description": "In an ever-evolving digital world, our services keep you at the forefront of the latest trends and technologies."
+      },
+      "customStrategies": {
+        "title": "Custom Strategies",
+        "description": "We develop tailored solutions that perfectly align with your business objectives and audience needs."
+      },
+      "measurableResults": {
+        "title": "Measurable Results",
+        "description": "Our data-driven approach ensures that every action translates into tangible results and significant ROI."
+      },
+      "provenExperience": {
+        "title": "Proven Experience",
+        "description": "With years of experience and a track record of successes, we are the ideal partner to boost your digital presence."
+      },
+      "adaptability": {
+        "title": "Adaptability",
+        "description": "The digital environment changes rapidly, and our ability to adapt to new trends and technologies ensures that your business stays relevant. We implement flexible solutions that can evolve along with your needs and market demands."
+      },
+      "measurableImpact": {
+        "title": "Measurable Impact",
+        "description": "With our data-driven solutions, you can get real-time analytics on your website or application performance. This allows you to make informed decisions and optimize your strategies to maximize impact on your customers."
+      },
+      "continuousImprovement": {
+        "title": "Continuous Improvement",
+        "description": "Our team is updated and constantly learning with technological innovations. This ensures that every project we undertake is backed by the most recent knowledge and industry best practices."
+      },
+      "continuousSupport": {
+        "title": "Continuous Support and Maintenance",
+        "description": "Our commitment doesn't end with project delivery. We offer continuous support and maintenance to ensure your website functions smoothly and stays updated with the latest technologies. We constantly monitor your system to detect and resolve any errors before they affect your users."
+      }
+    },
+    "cta": "Power your business now"
+  },
+  "whyWebPresence": {
+    "title": "The importance of your digital presence",
+    "subtitle": "In today's competitive landscape, your website is not just an option, it's a necessity. It's your digital showcase, your first impression, and your most powerful tool to convert visitors into loyal customers.",
+    "reasons": {
+      "visibility": {
+        "title": "24/7 Visibility",
+        "description": "Your website is your most dedicated salesperson, working tirelessly 24 hours a day, 7 days a week."
+      },
+      "marketExpansion": {
+        "title": "Market Expansion",
+        "description": "An e-commerce allows you to reach customers worldwide, drastically expanding your potential customer base."
+      },
+      "actionableData": {
+        "title": "Actionable Data",
+        "description": "Landing pages provide valuable insights about your customers, allowing you to continuously optimize your strategies."
+      },
+      "acceleratedGrowth": {
+        "title": "Accelerated Growth",
+        "description": "A solid web presence is the catalyst for exponential growth in the digital era."
+      }
+    },
+    "callout": {
+      "title": "Ready to dominate the digital world?",
+      "description": "Don't miss the opportunity to transform your business. Every second counts in the online world.",
+      "cta": "Start your digital journey"
+    }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "items": [
+      {
+        "quote": "BrandAxiom completely transformed our online presence. Their SEO strategies increased our organic traffic by 150% in just 6 months, and their redesign of our e-commerce platform increased our conversion rates by 40%. They are not just service providers; they are growth partners.",
+        "author": "Elena Rodriguez",
+        "position": "CMO, GreenLeaf Organics"
+      },
+      {
+        "quote": "As a startup, we needed a brand that could compete with established companies. BrandAxiom exceeded our expectations. Their holistic approach to branding (from logo design to social media strategy) helped us secure our Series A funding and establish a strong market presence.",
+        "author": "Alex Ngyuen",
+        "position": "Co-founder, TechNova Solutions"
+      },
+      {
+        "quote": "We were skeptical about influencer marketing, but BrandAxiom's data-driven approach changed our minds. They selected a perfect mix of micro and macro-influencers who aligned with our brand values. The campaign resulted in a 100% ROI and significantly improved brand sentiment among millennials.",
+        "author": "Sarah Goldstein",
+        "position": "Brand Manager, LuxeBeauty Co."
+      },
+      {
+        "quote": "BrandAxiom's content strategy revitalized our B2B lead generation. Their team created detailed white papers and case studies that positioned us as thought leaders in our industry. In one year, our inbound leads increased by 180% and our sales cycle shortened by 40%.",
+        "author": "Marcus Thompson",
+        "position": "VP of Sales, IndustrialTech Solutions"
+      },
+      {
+        "quote": "When we had to pivot our business model during the pandemic, BrandAxiom was instrumental in making our transition successful. They quickly developed a digital strategy that helped us retain 85% of our customers and even expand into new markets. Their agility and expertise were truly impressive.",
+        "author": "Olivia Chen",
+        "position": "CEO, FitLife Gyms"
+      },
+      {
+        "quote": "As a non-profit organization, we needed to maximize our limited marketing budget. BrandAxiom's targeted PPC campaigns and grant writing support increased our donations by 250% year over year. Their passion for our cause and marketing expertise made them feel like an extension of our team.",
+        "author": "David Okafor",
+        "position": "Executive Director, EduForAll Foundation"
+      }
+    ]
+  },
+  "aboutUs": {
+    "title": "Who We Are",
+    "description": {
+      "part1": "At ConcatDev, we are experts in software development and digital technology, passionate about driving your business growth.",
+      "highlight": "We don't create web pages, we create user experiences",
+      "part2": "and personalized solutions that combine web development with strategic analysis for maximum impact on functionality."
+    },
+    "valuesTitle": "Our Values",
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "We constantly seek new ways to drive our clients' success."
+      },
+      "precision": {
+        "title": "Precision",
+        "description": "We focus on data-driven strategies to achieve measurable results."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "We work closely with our clients to achieve common goals."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We strive to exceed expectations in every project we undertake."
+      }
+    },
+    "team": {
+      "gian": {
+        "role": "FullStack Developer | ReactJS & TS | Flask & PostgreSQL",
+        "info": "Fullstack programmer with extensive knowledge in Frontend and Backend fields along with Relational Databases, always ready for new challenges and projects."
+      }
+    },
+    "skills": {
+      "fullstack": "FullStack Developer",
+      "innovation": "Technological Innovation",
+      "leadership": "Business Leadership",
+      "traffic": "Traffic Analysis",
+      "react": "ReactJS & TS Development",
+      "postgres": "PostgreSQL & Flask Development",
+      "frontend": "Frontend & Backend Development"
+    }
+  },
+  "footer": {
+    "description": "Creating exceptional digital experiences that generate results.",
+    "privacyPolicy": "Privacy Policy",
+    "cookiesPolicy": "Cookies Policy",
+    "services": {
+      "title": "Services",
+      "development": "Development",
+      "marketing": "Marketing",
+      "optimization": "Optimization"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "about": "About",
+      "projects": "Projects",
+      "process": "Process",
+      "contact": "Contact"
+    },
+    "social": {
+      "title": "Social",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    },
+    "copyright": {
+      "title": "&copy; {year} ConcatDev. All rights reserved by Gianfranco Di Berardino."
+    }
   },
   "contact": {
     "title": "Contact Us",

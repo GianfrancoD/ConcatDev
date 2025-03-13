@@ -16,19 +16,23 @@ import {
 } from "lucide-react";
 // import logo from "../../assets/logobrandaxiom.png";
 import logo from "../../assets/concatdev2.png";
+import LanguageSelector from "./components/lenguajeSelector/lenguaje.tsx";
+import { useLanguageContext } from "../../provider.tsx";
+import LanguageSelectorAnimated from "./components/lenguajeSelector/lenguajeanimado.tsx";
 
-const navItems = [
-  { name: "Inicio", href: "/", icon: Home },
-  { name: "Servicios", href: "servicios", icon: Briefcase },
-  { name: "Proyectos", href: "projects", icon: Layout },
-  { name: "Blog", href: "blog", icon: NotepadText },
-  { name: "Testimonios", href: "testimonio", icon: PersonStanding },
-  { name: "Contactos", href: "footer", icon: Phone },
-];
+// const navItems = [
+//   { name: "Inicio", href: "/", icon: Home },
+//   { name: "Servicios", href: "servicios", icon: Briefcase },
+//   { name: "Proyectos", href: "projects", icon: Layout },
+//   { name: "Blog", href: "blog", icon: NotepadText },
+//   { name: "Testimonios", href: "testimonio", icon: PersonStanding },
+//   { name: "Contactos", href: "footer", icon: Phone },
+// ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguageContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +41,15 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navItems = [
+    { name: t("nav.home", "Inicio"), href: "/", icon: Home },
+    { name: t("nav.services"), href: "servicios", icon: Briefcase },
+    { name: t("nav.projects"), href: "projects", icon: Layout },
+    { name: t("nav.blog"), href: "blog", icon: NotepadText },
+    { name: t("nav.testimonials"), href: "testimonio", icon: PersonStanding },
+    { name: t("nav.contacts"), href: "footer", icon: Phone },
+  ];
 
   return (
     <nav
@@ -69,6 +82,7 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <LanguageSelector />
             <a
               href="#contact"
               className="px-4 py-2 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 text-sm font-medium hover:from-[#ffa851] hover:to-[#ff6492] transition-all"
@@ -110,8 +124,9 @@ export const Navbar = () => {
             className="flex items-center justify-center px-4 py-2 rounded-md bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all mt-4"
             onClick={() => setIsOpen(false)}
           >
-            Empezar
+            {t("nav.getStarted")}
           </a>
+          <LanguageSelectorAnimated isMobile={true} />
         </div>
       </div>
     </nav>

@@ -14,6 +14,10 @@ import {
   Calendar,
   Laptop,
   ShieldIcon,
+  Rocket,
+  Gem,
+  Users,
+  Siren,
 } from "lucide-react";
 
 //
@@ -23,82 +27,95 @@ export default function Services() {
   const { t } = useLanguageContext();
 
   const services = [
-    // {
-    //   icon: <Share2 className="w-12 h-12 text-blue-400" />,
-    //   title: "Auditoría Web",
-    //   description:
-    //     "💎 Potenciamos tu presencia en redes sociales con estrategias personalizadas y contenido que enganche a tu cliente potencial. ¿EMPEZAMOS?",
+    {
+      icon: <Siren className="w-12 h-12 text-blue-400" />,
+      title: "Auditoría Web",
+      description:
+        "🔍 Evaluamos el rendimiento de tu sitio web y te proporcionamos recomendaciones para optimizar la conversión. ¡Comencemos a mejorar tu presencia en línea!",
 
-    //   plans: [
-    //     {
-    //       name: "Impulso",
-    //       price: "$200/mes",
-    //       description:
-    //         "Plan ideal para pequeñas empresas que buscan establecer su presencia en redes sociales.",
-    //       features: [
-    //         "1 Campaña con 2 Anuncios - Duracion 7 Dias (ADS)",
-    //         "Informe mensual básico",
-    //         "8 Publicaciones mensuales en Redes Sociales",
-    //         "20 Historias mensuales",
-    //         "Creacion de Hashtag y Analisis de Hashtag",
-    //         "Estrategia de SEO",
-    //         "Copywriting",
-    //       ],
-    //       icon: <Users className="w-8 h-8 text-blue-400" />,
-    //     },
-    //     {
-    //       name: "Dinamico",
-    //       price: "$500/mes",
-    //       description:
-    //         "Perfecto para empresas que esperan un resultando mejor y diferente.",
-    //       features: [
-    //         "3 Campaña con 6 Anuncios - Duracion 30 Dias (ADS)",
-    //         "12 Publicaciones mensuales en Redes Sociales",
-    //         "40 Historias mensuales",
-    //         "2 Reels mensual para aumentar el engagement",
-    //         "Estrategia integral: Segmentacion avanzada y remarketing",
-    //         "Informe Exhautivo con recomendaciones",
-    //         "Estrategia de SEO",
-    //         "Copywriting",
-    //       ],
-    //       icon: <Gem className="w-8 h-8 text-blue-400" />,
-    //     },
-    //     {
-    //       name: "Crecimiento",
-    //       price: "$300/mes ",
-    //       description:
-    //         "Solución completa para grandes empresas con necesidades específicas.",
-    //       features: [
-    //         "2 Campaña con 4 Anuncios - Duracion 14 Dias (ADS)",
-    //         "10 Publicaciones mensuales en Redes Sociales",
-    //         "30 Historias mensuales",
-    //         "1 Reels mensual para aumentar el engagement",
-    //         "Optimizacion avanzada: Pruebas A/B y ajustes continuos",
-    //         "Estrategia de SEO",
-    //         "Copywriting",
-    //       ],
-    //       icon: <Rocket className="w-8 h-8 text-blue-400" />,
-    //     },
-    //     {
-    //       name: "Enterprise",
-    //       price: "Personalizado",
-    //       description:
-    //         "Solución completa para grandes empresas con necesidades específicas.",
-    //       features: [
-    //         "Gestión completa de redes",
-    //         "Estrategia omnicanal",
-    //         "Campañas publicitarias",
-    //         "Reporting en tiempo real",
-    //       ],
-    //       icon: <Building2 className="w-8 h-8 text-blue-400" />,
-    //     },
-    //   ],
-    //   note: [
-    //     {
-    //       frase: "Muchas Gracias por preferirnos 👏👏 ",
-    //     },
-    //   ],
-    // },
+      plans: [
+        {
+          name: "Auditoría Básica",
+          price: "$250",
+          description: "Incluye análisis de rendimiento y SEO básico.",
+          features: [
+            "Evaluación de la velocidad de carga de la página.",
+            "Optimización de imágenes y recursos.",
+            "Análisis de palabras clave.",
+            "Optimización on-page (títulos, meta descripciones).",
+            "Evaluación de la navegación y estructura del menú.",
+            "Verificación de certificados SSL.",
+            "Evaluación de la calidad y relevancia del contenido.",
+          ],
+          icon: <Users className="w-8 h-8 text-blue-400" />,
+        },
+        {
+          name: "Auditoría Completa",
+          price: "$500",
+          description:
+            "Incluye todos los componentes mencionados (rendimiento, SEO, usabilidad, seguridad, contenido, tráfico, conversiones).",
+          features: [
+            "Análisis de la velocidad de carga de la página.",
+            "Optimización de imágenes y recursos.",
+            "Análisis de palabras clave y optimización on-page.",
+            "Estructura de URL y enlaces internos.",
+            "Evaluación de la navegación y estructura del menú.",
+            "Diseño responsivo y compatibilidad móvil.",
+            "Verificación de certificados SSL y vulnerabilidades de seguridad.",
+            "Evaluación de la calidad y relevancia del contenido.",
+            "Análisis de fuentes de tráfico y comportamiento del usuario.",
+            "Análisis de la tasa de conversión y efectividad de las llamadas a la acción (CTA).",
+          ],
+          icon: <Gem className="w-8 h-8 text-blue-400" />,
+        },
+        {
+          name: "Auditoría Personalizada",
+          price: "A partir de $750",
+          description:
+            "Para sitios más grandes o complejos, se puede ofrecer un precio personalizado basado en las necesidades específicas del cliente.",
+          features: [
+            "Auditoría completa adaptada a las necesidades del cliente.",
+            "Análisis detallado de todos los componentes mencionados.",
+            "Recomendaciones personalizadas para optimización.",
+            "Informe detallado con hallazgos y recomendaciones.",
+            "Reunión de presentación para discutir resultados y próximos pasos.",
+          ],
+          icon: <Rocket className="w-8 h-8 text-blue-400" />,
+        },
+      ],
+      process: [
+        {
+          step: "Reunión Inicial",
+          description:
+            "Reunión con el cliente para entender sus objetivos y expectativas.",
+        },
+        {
+          step: "Recopilación de Datos",
+          description:
+            "Uso de herramientas de análisis (Google Analytics, SEMrush, etc.) para recopilar datos.",
+        },
+        {
+          step: "Análisis",
+          description:
+            "Evaluación de cada componente mencionado anteriormente.",
+        },
+        {
+          step: "Informe",
+          description:
+            "Creación de un informe detallado con hallazgos y recomendaciones.",
+        },
+        {
+          step: "Reunión de Presentación",
+          description:
+            "Presentación de los resultados al cliente y discusión de los próximos pasos.",
+        },
+      ],
+      note: [
+        {
+          frase: "¡Muchas gracias por preferirnos! 👏👏",
+        },
+      ],
+    },
     {
       icon: <Code className="w-12 h-12 text-[#FCAE60]" />,
       title: t("services.servicesData.webDev.title", "Web Dev"),

@@ -1,5 +1,8 @@
 import React from "react";
+import { useLanguageContext } from "../../provider";
 export default function Hero() {
+  const { t } = useLanguageContext();
+
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
@@ -20,38 +23,42 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-4 py-32 max-[1024px]:px-0 max-[1024px]:py-0 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight ">
-            {"<"} Tu Éxisto,{" "}
+            {/* {"<"} Tu Éxisto,{" "} */}
+            {"<"} {t("hero.title", "Tu Éxito")}{" "}
             <span className="bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent text-[60px]">
-              Nuestro Código {"/>"}
+              {/* Nuestro Código {"/>"} */}
+              {t("hero.subtitle", "Nuestro Código")} {"/>"}
             </span>
           </h1>
           <h2 className="relative mb-8">
             <p className="text-xl sm:text-2xl text-orange-300 font-semibold mb-2 ">
-              Tu Marca, Nuestra Pasión
+              {t("hero.tagline1", "Tu Marca, Nuestra Pasión")}
             </p>
             <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent">
-              Innovación y Eficiencia Garantizadas
+              {t("hero.tagline2", "Innovación y Eficiencia Garantizadas")}
             </p>
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-400 to-pink-400"></div>
           </h2>
           <div className="relative mb-4">
             <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-[50vw] max-[768px]:max-w-[600vw] mx-auto">
-              Potenciamos tu Presencia con Programación Web y Marketing
-              Analítico, transformando datos en estrategias efectivas que
-              optimizan tu rendimiento online. <br />
+              {t(
+                "hero.description",
+                "Potenciamos tu Presencia con Programación Web y Marketing Analítico, transformando datos en estrategias efectivas que optimizan tu rendimiento online."
+              )}
+              <br />
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             {[
-              "Programación Web",
-              "Software a Medida",
-              "E-commerce",
-              "SEO",
-              "SEM",
-              "Social Ads",
-              "Aplicaciones Web",
-              "Analisis de Tráfico",
+              t("hero.services.webDev", "Programación Web"),
+              t("hero.services.customSoftware", "Software a Medida"),
+              t("hero.services.ecommerce", "E-commerce"),
+              t("hero.services.seo", "SEO"),
+              t("hero.services.sem", "SEM"),
+              t("hero.services.socialAds", "Social Ads"),
+              t("hero.services.webApps", "Aplicaciones Web"),
+              t("hero.services.trafficAnalysis", "Análisis de Tráfico"),
             ].map((service, index) => (
               <span
                 key={index}
@@ -65,7 +72,7 @@ export default function Hero() {
             href="#BrandAxiom"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1]  text-[#312760] text-lg font-medium hover:from-[#ffa54b] hover:to-[#fa7da3]  hover:text-black transition-all transform hover:scale-105 inline-block"
           >
-            Empieza tu viaje
+            {t("hero.heroBt.btHero", "Empieza tu viaje")}
           </a>
         </div>
       </div>

@@ -10,9 +10,23 @@
     "language": "Idioma"
   },
   "hero": {
-    "title": "Soluciones digitales innovadoras",
-    "subtitle": "Diseñamos y desarrollamos experiencias digitales excepcionales",
-    "cta": "Conoce nuestros proyectos"
+    "title": "Tu Éxito",
+    "subtitle": "Nuestro Código",
+    "tagline1": "Tu Marca, Nuestra Pasión",
+    "tagline2": "Innovación y Eficiencia Garantizadas",
+    "description": "Potenciamos tu Presencia con Programación Web y Marketing Analítico, transformando datos en estrategias efectivas que optimizan tu rendimiento online.",
+    "cta": "Empieza tu viaje",
+    "imageAlt": "Marketing Digital",
+    "services": {
+      "webDev": "Programación Web",
+      "customSoftware": "Software a Medida",
+      "ecommerce": "E-commerce",
+      "seo": "SEO",
+      "sem": "SEM",
+      "socialAds": "Social Ads",
+      "webApps": "Aplicaciones Web",
+      "trafficAnalysis": "Análisis de Tráfico"
+    }
   },
   "projects": {
     "title": "Nuestros Proyectos",
@@ -28,6 +42,219 @@
     "subtitle": "Explora nuestros artículos sobre tendencias, consejos y mejores prácticas",
     "readMore": "Leer más",
     "viewAll": "Ver todos los artículos"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "viewPlans": "Ver Planes",
+    "items": {
+      "trafficAnalysis": {
+        "title": "Análisis de Tráfico",
+        "description": "Mide el comportamientos de tus usuarios y optimiza tu estrategia digital para maximizar resultados."
+      },
+      "optimization": {
+        "title": "Optimización",
+        "description": "Optimice su presencia digital para lograr el máximo impacto y conversión."
+      },
+      "development": {
+        "title": "Desarrollo",
+        "description": "Cree aplicaciones web escalables y modernas que generen resultados."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Campañas de marketing estratégicas que llegan e involucran a su mercado objetivo."
+      }
+    }
+  },
+  "aboutBrandAxiom": {
+    "title": "¿Qué es ConcatDev?",
+    "description1": "ConcatDev es la integración estratégica de Programación Web y Marketing Digital para impulsar el crecimiento de tu negocio en la era digital. Combinamos analítica avanzada con desarrollo web de vanguardia para ofrecerte herramientas efectivas que te permitan destacar y conectar con tu audiencia.",
+    "description2": "Nuestra metodología única se basa en un diseño funcional, tecnología de punta y un profundo análisis de datos. En ConcatDev, creamos conexiones significativas entre tu empresa y tus clientes, transformando datos en decisiones informadas y estrategias adaptativas centradas en el usuario.",
+    "pillars": {
+      "creativeInnovation": {
+        "title": "Innovación Creativa",
+        "description": "Combinamos ideas vanguardistas con estrategias efectivas para desarrollar marcas que realmente destacan en el mercado."
+      },
+      "strategicPrecision": {
+        "title": "Precisión Estratégica",
+        "description": "Cada decisión que tomamos está respaldada por datos sólidos y alineada con los objetivos específicos de tu negocio, asegurando un enfoque claro y efectivo."
+      },
+      "digitalAgility": {
+        "title": "Agilidad Digital",
+        "description": "Nos adaptamos rápidamente a las últimas tendencias del mercado, ajustando nuestras estrategias para maximizar tu impacto digital."
+      },
+      "comprehensiveExperience": {
+        "title": "Experiencia Integral",
+        "description": "Ofrecemos soluciones completas que abarcan todos los aspectos del branding moderno, desde la conceptualización hasta la ejecución."
+      }
+    },
+    "finalDescription": "Con concatDev creamos experiencias digitales innovadoras que transforman tu marca, impulsan tu crecimiento. Nos adaptamos a las últimas tecnologías para ofrecerte soluciones a medida que generan resultados reales.",
+    "cta": "Impulsa tu éxito con ConcatDev"
+  },
+  "servicesPlans": {
+    "title": "Nuestros Servicios",
+    "viewPlans": "Ver Planes"
+  },
+  "howWeWork": {
+    "title": "Cómo Trabajamos",
+    "subtitle": "Nuestro proceso está diseñado para garantizar transparencia, eficiencia y resultados excepcionales en cada proyecto.",
+    "steps": {
+      "step1": {
+        "title": "Consulta Inicial y Análisis de Requisitos",
+        "shortDescription": "Conversamos sobre tu proyecto para entender tus objetivos y necesidades.",
+        "fullDescription": "Programamos una reunión para conocer a fondo tu negocio, analizar tu situación actual y definir los objetivos que deseas alcanzar."
+      },
+      "step2": {
+        "title": "Propuesta Estratégica y Planificación",
+        "shortDescription": "Desarrollamos un plan personalizado adaptado a tus necesidades.",
+        "fullDescription": "Basándonos en la información recopilada, diseñamos una estrategia detallada que incluye el alcance del proyecto, metodología, plazos y presupuesto. Te presentamos esta propuesta para su revisión y ajustes."
+      },
+      "step3": {
+        "title": "Diseño y Desarrollo del Proyecto",
+        "shortDescription": "Implementamos las soluciones acordadas con actualizaciones regulares.",
+        "fullDescription": "Una vez aprobada la propuesta, comenzamos el proceso de diseño y desarrollo. Mantenemos una comunicación constante con revisiones periódicas para asegurar que el proyecto avanza según lo planeado y cumple con tus expectativas."
+      },
+      "step4": {
+        "title": "Revisión, Ajustes y Refinamiento",
+        "shortDescription": "Refinamos el proyecto basándonos en tus comentarios.",
+        "fullDescription": "Presentamos el proyecto para tu revisión detallada. Recogemos tus comentarios, realizamos los ajustes necesarios."
+      },
+      "step5": {
+        "title": "Testeos, Debugs y Optimización",
+        "shortDescription": "Identificamos y corregimos errores técnicos.",
+        "fullDescription": "Realizamos pruebas unitarias, de integración y de rendimiento. Identificamos y corregimos cualquier error encontrado durante las pruebas para asegurar un producto estable y eficiente."
+      },
+      "step6": {
+        "title": "Lanzamiento y Soporte Continuo",
+        "shortDescription": "Implementamos la solución final y proporcionamos soporte continuo.",
+        "fullDescription": "Realizamos el lanzamiento oficial de tu proyecto y te ofrecemos capacitación sobre su uso. Además, proporcionamos soporte técnico continuo y asesoramiento para maximizar los resultados y adaptarnos a nuevas necesidades que puedan surgir."
+      }
+    },
+    "cta": "Empieza tu proyecto con nosotros"
+  },
+  "whyOurServices": {
+    "title": "¿Por qué necesitas nuestros servicios?",
+    "subtitle": "En la era digital, destacar es esencial. Nuestros servicios no solo te ayudan a sobresalir, sino que transforman tu presencia online en un motor de crecimiento para tu negocio.",
+    "reasons": {
+      "constantInnovation": {
+        "title": "Innovación Constante",
+        "description": "En un mundo digital en constante evolución, nuestros servicios te mantienen a la vanguardia de las últimas tendencias y tecnologías."
+      },
+      "customStrategies": {
+        "title": "Estrategias Personalizadas",
+        "description": "Desarrollamos soluciones a medida que se alinean perfectamente con tus objetivos de negocio y las necesidades de tu audiencia."
+      },
+      "measurableResults": {
+        "title": "Resultados Medibles",
+        "description": "Nuestro enfoque basado en datos garantiza que cada acción se traduzca en resultados tangibles y un ROI significativo."
+      },
+      "provenExperience": {
+        "title": "Experiencia Comprobada",
+        "description": "Con años de experiencia y un historial de éxitos, somos el socio ideal para impulsar tu presencia digital."
+      },
+      "adaptability": {
+        "title": "Adaptibilidad",
+        "description": "El entorno digital cambia rápidamente, y nuestra capacidad para adaptarnos a nuevas tendencias y tecnologías asegura que tu negocio se mantenga relevante. Implementamos soluciones flexibles que pueden evolucionar junto con tus necesidades y las demandas del mercado."
+      },
+      "measurableImpact": {
+        "title": "Impacto Mediables",
+        "description": "Con nuestras soluciones basadas en datos, puedes obtener análisis en tiempo real sobre el rendimiento de tu sitio web o aplicación. Esto te permite tomar decisiones informadas y optimizar tus estrategias para maximizar el impacto en tus clientes."
+      },
+      "continuousImprovement": {
+        "title": "Mejora Continua",
+        "description": "Nuestro equipo esta actualizado y en constante aprendizaje con las innovaciones tecnológicas. Esto garantiza que cada proyecto que emprendemos esté respaldado por el conocimiento más reciente y las mejores prácticas de la industria."
+      },
+      "continuousSupport": {
+        "title": "Soporte Continuou y Mantenimiento",
+        "description": "Nuestro compromiso no termina con la entrega del proyecto. Ofrecemos soporte continuo y mantenimiento para asegurarnos de que tu Pagina funcione sin problemas y se mantenga actualizada con las últimas tecnologías. Monitoreamos tu sistema de forma constante para detectar y resolver cualquier error antes de que afecte a tus usuarios."
+      }
+    },
+    "cta": "Potencia tu negocio ahora"
+  },
+  "whyWebPresence": {
+    "title": "La importancia de tu presencia digital",
+    "subtitle": "En el competitivo panorama actual, tu sitio web no es solo una opción, es una necesidad. Es tu escaparate digital, tu primera impresión y tu herramienta más poderosa para convertir visitantes en clientes leales.",
+    "reasons": {
+      "visibility": {
+        "title": "Visibilidad 24/7",
+        "description": "Tu sitio web es tu vendedor más dedicado, trabajando incansablemente las 24 horas del día, los 7 días de la semana."
+      },
+      "marketExpansion": {
+        "title": "Expansión de Mercado",
+        "description": "Un e-commerce te permite llegar a clientes en todo el mundo, expandiendo drásticamente tu base de clientes potenciales."
+      },
+      "actionableData": {
+        "title": "Datos Accionables",
+        "description": "Las landing pages proporcionan insights valiosos sobre tus clientes, permitiéndote optimizar continuamente tus estrategias."
+      },
+      "acceleratedGrowth": {
+        "title": "Crecimiento Acelerado",
+        "description": "Una presencia web sólida es el catalizador para un crecimiento exponencial en la era digital."
+      }
+    },
+    "callout": {
+      "title": "¿Listo para dominar el mundo digital?",
+      "description": "No dejes pasar la oportunidad de transformar tu negocio. Cada segundo cuenta en el mundo online.",
+      "cta": "Comienza tu viaje digital"
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios de Clientes",
+    "items": [
+      {
+        "quote": "BrandAxiom transformó por completo nuestra presencia en línea. Sus estrategias de SEO aumentaron nuestro tráfico orgánico en un 150 % en solo 6 meses y su rediseño de nuestra plataforma de comercio electrónico aumentó nuestras tasas de conversión en un 40 %. No son solo proveedores de servicios; son socios de crecimiento.",
+        "author": "Elena Rodriguez",
+        "position": "CMO, GreenLeaf Organics"
+      },
+      {
+        "quote": "Como empresa emergente, necesitábamos una marca que pudiera competir con las empresas establecidas. BrandAxiom superó nuestras expectativas. Su enfoque holístico de la marca (desde el diseño del logotipo hasta la estrategia de redes sociales) nos ayudó a asegurar nuestra financiación de Serie A y a establecer una sólida presencia en el mercado.",
+        "author": "Alex Ngyuen",
+        "position": "Co-founder, TechNova Solutions"
+      },
+      {
+        "quote": "Éramos escépticos sobre el marketing de influencia, pero el enfoque basado en datos de BrandAxiom nos hizo cambiar de opinión. Seleccionaron una combinación perfecta de micro y macroinfluenciadores que se alineaban con los valores de nuestra marca. La campaña tuvo como resultado un retorno de la inversión del 100 % y mejoró significativamente el sentimiento de marca entre los millennials.",
+        "author": "Sarah Goldstein",
+        "position": "Brand Manager, LuxeBeauty Co."
+      },
+      {
+        "quote": "La estrategia de contenido de BrandAxiom revitalizó nuestra generación de oportunidades de negocio B2B. Su equipo creó documentos técnicos detallados y estudios de casos que nos posicionaron como líderes de opinión en nuestra industria. En un año, nuestras oportunidades de negocio entrantes aumentaron en un 180 % y nuestro ciclo de ventas se acortó en un 40 %.",
+        "author": "Marcus Thompson",
+        "position": "VP of Sales, IndustrialTech Solutions"
+      },
+      {
+        "quote": "Cuando tuvimos que cambiar nuestro modelo de negocio durante la pandemia, BrandAxiom fue fundamental para que nuestra transición fuera exitosa. Desarrollaron rápidamente una estrategia digital que nos ayudó a retener el 85 % de nuestros clientes e incluso a expandirnos a nuevos mercados. Su agilidad y experiencia fueron realmente impresionantes.",
+        "author": "Olivia Chen",
+        "position": "CEO, FitLife Gyms"
+      },
+      {
+        "quote": "Como organización sin fines de lucro, necesitábamos maximizar nuestro limitado presupuesto de marketing. Las campañas de PPC dirigidas de BrandAxiom y el apoyo para la redacción de solicitudes de subvenciones aumentaron nuestras donaciones en un 250 % año tras año. Su pasión por nuestra causa y su experiencia en marketing los hicieron sentir como una extensión de nuestro equipo.",
+        "author": "David Okafor",
+        "position": "Executive Director, EduForAll Foundation"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Creando experiencias digitales excepcionales que generan resultados.",
+    "privacyPolicy": "Política de privacidad",
+    "cookiesPolicy": "Política de Cookies",
+    "services": {
+      "title": "Servicios",
+      "development": "Desarrollo",
+      "marketing": "Marketing",
+      "optimization": "Optimización"
+    },
+    "navigation": {
+      "title": "Navegación",
+      "about": "About",
+      "projects": "Proyectos",
+      "process": "Process",
+      "contact": "Contact"
+    },
+    "social": {
+      "title": "Redes",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    },
+    "copyright": "&copy; {year} ConcatDev. Todos los derechos reservados por Gianfranco Di Berardino."
   },
   "contact": {
     "title": "Contáctanos",

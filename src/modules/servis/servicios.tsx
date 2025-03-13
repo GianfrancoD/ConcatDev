@@ -1,33 +1,44 @@
 import React from "react";
-
-const services = [
-  {
-    title: "Analisis de Trafico",
-    description:
-      "Mide el comportamientos de tus usuarios y optimiza tu estrategia digital para maximizar resultados.",
-    icon: "📊",
-  },
-  {
-    title: "Optimización",
-    description:
-      "Optimice su presencia digital para lograr el máximo impacto y conversión.",
-    icon: "⚡",
-  },
-  {
-    title: "Desarrollo",
-    description:
-      "Cree aplicaciones web escalables y modernas que generen resultados.",
-    icon: "⚙️",
-  },
-  {
-    title: "Marketing",
-    description:
-      "Campañas de marketing estratégicas que llegan e involucran a su mercado objetivo.",
-    icon: "📈",
-  },
-];
+import { useLanguageContext } from "../../provider";
 
 export default function Services() {
+  const { t } = useLanguageContext();
+
+  const services = [
+    {
+      title: t("services.items.trafficAnalysis.title", "Análisis de Tráfico"),
+      description: t(
+        "services.items.trafficAnalysis.description",
+        "Mide el comportamientos de tus usuarios y optimiza tu estrategia digital para maximizar resultados."
+      ),
+      icon: "📊",
+    },
+    {
+      title: t("services.items.optimization.title", "Optimización"),
+      description: t(
+        "services.items.optimization.description",
+        "Optimice su presencia digital para lograr el máximo impacto y conversión."
+      ),
+      icon: "⚡",
+    },
+    {
+      title: t("services.items.development.title", "Desarrollo"),
+      description: t(
+        "services.items.development.description",
+        "Cree aplicaciones web escalables y modernas que generen resultados."
+      ),
+      icon: "⚙️",
+    },
+    {
+      title: t("services.items.marketing.title", "Marketing"),
+      description: t(
+        "services.items.marketing.description",
+        "Campañas de marketing estratégicas que llegan e involucran a su mercado objetivo."
+      ),
+      icon: "📈",
+    },
+  ];
+
   return (
     <section
       id="services"

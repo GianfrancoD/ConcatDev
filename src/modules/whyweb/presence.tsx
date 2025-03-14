@@ -5,7 +5,7 @@ import React from "react";
 import { useLanguageContext } from "../../provider"; // Asegúrate de que la ruta sea correcta
 
 export const WhyWebPresence = () => {
-  const { t } = useLanguageContext(); // Obtén la función de traducción
+  const { t } = useLanguageContext();
 
   const reasons = [
     {

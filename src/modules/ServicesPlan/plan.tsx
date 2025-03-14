@@ -183,153 +183,417 @@ export default function Services() {
           icon: <Layout className="w-8 h-8 text-[#FF8FB1]" />,
         },
         {
-          name: "Página Corporativa",
+          name: t(
+            "services.servicesData.webDev.plans.corporate.name",
+            "Página Corporativa"
+          ),
           price: "$470",
-          description:
-            "Desarrollo de un sitio web completo que represente la identidad de la empresa y sus servicios.",
+          description: t(
+            "services.servicesData.webDev.plans..corporate.description",
+            "Desarrollo de un sitio web completo que represente la identidad de la empresa y sus servicios."
+          ),
           features: [
-            "Hasta 4 - 6 páginas",
-            "Copywriting",
-            "Diseño adaptado a moviles",
-            "Diseño personalizado (UX/UI)",
-            "Optimización SEO",
-            "Integración con redes sociales",
-            "Boton de WhatssApp",
-            "Hosting y dominio (.com) por 1 año",
+            t(
+              "services.servicesData.webDev.plans.corporate.features.0",
+              "Hasta 4 - 6 páginas"
+            ),
+            t(
+              "services.servicesData.webDev.plans.corporate.features.1",
+              "Copywriting"
+            ),
+            t(
+              "services.servicesData.webDev.plans.corporate.features.2",
+              "Diseño adaptado a moviles"
+            ),
+            t(
+              "services.servicesData.webDev.plans.corporate.features.3",
+              "Diseño personalizado (UX/UI)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.corporate.features.4",
+              "Optimización SEO"
+            ),
+            t(
+              "services.servicesData.webDev.plans.corporate.features.5",
+              "Integración con redes sociales"
+            ),
+            t(
+              "services.servicesData.webDev.plans.corporate.features.6",
+              "Boton de WhatssApp"
+            ),
+            t(
+              "services.servicesData.webDev.plans.corporate.features.7",
+              "Hosting y dominio (.com) por 1 año"
+            ),
           ],
-          time: "Tiempo estimado de entrega: 1-4 meses",
+          time: t(
+            "services.servicesData.webDev.plans.corporate.time",
+            "Tiempo estimado de entrega: 1-4 meses"
+          ),
           icon: <Building2 className="w-8 h-8 text-[#FF8FB1]" />,
         },
         {
-          name: "Página Informativa",
+          name: t(
+            "services.servicesData.webDev.plans.informative.name",
+            "Página Informativa"
+          ),
           price: "$850",
-          description:
-            "Creación de un sitio informativo que incluya un formulario para contacto o consultas, como suficiente informacion y estrategia para llegar a tu cliente Objetivo.",
+          description: t(
+            "services.servicesData.webDev.plans.informative.description",
+            "Creación de un sitio informativo que incluya un formulario para contacto o consultas, como suficiente informacion y estrategia para llegar a tu cliente Objetivo."
+          ),
           features: [
-            "Hasta 4 - 8 páginas",
-            "Copywriting",
-            "Diseño adaptados a moviles",
-            "Diseño personalizado (UX/UI)",
-            "Optimización SEO",
-            "Análisis mensual del rendimiento",
-            "Análisis de tráfico",
-            "Publicidad Paga (ADS)",
-            "Reporte mensual de análisis de tráfico",
-            "Entrega de informes mensuales",
-            "Boton de WhatssApp",
-            "Hosting y dominio (.com) por 1 año",
+            t(
+              "services.servicesData.webDev.plans.informative.features.0",
+              "Hasta 4 - 8 páginas"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.1",
+              "Copywriting"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.2",
+              "Diseño adaptados a moviles"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.3",
+              "Diseño personalizado (UX/UI)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.4",
+              "Optimización SEO"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.5",
+              "Análisis mensual del rendimiento"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.6",
+              "Análisis de tráfico"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.7",
+              "Publicidad Paga (ADS)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.8",
+              "Reporte mensual de análisis de tráfico"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.9",
+              "Entrega de informes mensuales"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.10",
+              "Boton de WhatssApp"
+            ),
+            t(
+              "services.servicesData.webDev.plans.informative.features.11",
+              "Hosting y dominio (.com) por 1 año"
+            ),
           ],
-          time: "Tiempo estimado de entrega: 1-3 meses",
+          time: t(
+            "services.servicesData.webDev.plans.informative.time",
+            "Tiempo estimado de entrega: 1-3 meses"
+          ),
           icon: <FileText className="w-8 h-8 text-[#FF8FB1]" />,
         },
         {
-          name: "E-commerce",
+          name: t(
+            "services.servicesData.webDev.plans.ecommerce.name",
+            "E-commerce"
+          ),
           price: "$4.675",
-          description:
-            "Desarrollo de una tienda online con todas las funcionalidades necesarias para gestionar productos y pagos en línea.",
+          description: t(
+            "services.servicesData.webDev.plans.ecommerce.description",
+            "Desarrollo de una tienda online con todas las funcionalidades necesarias para gestionar productos y pagos en línea."
+          ),
           features: [
-            "Hasta 5 - 8 páginas",
-            "Copywriting",
-            "Diseño adaptado a moviles",
-            "Diseño personalizado (UX/UI)",
-            "Carrito de compras",
-            "Integración con pasarela de pago (ej. Stripe, Paypal, etc)",
-            "Gestión básica de inventarios",
-            "Capacitación sobre gestión de productos",
-            "Análisis mensual del rendimiento",
-            "Optimización SEO",
-            "Optimización SEM",
-            "Publicidad Paga (ADS)",
-            "Análisis de tráfico",
-            "Entrega de informes mensuales",
-            "Reporte mensual de análisis de tráfico",
-            "Boton de WhatssApp",
-            "Hosting y dominio (.com) por 1 año",
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.0",
+              "Hasta 5 - 8 páginas"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.1",
+              "Copywriting"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.2",
+              "Diseño adaptado a moviles"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.3",
+              "Diseño personalizado (UX/UI)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.4",
+              "Carrito de compras"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.5",
+              "Integración con pasarela de pago (ej. Stripe, Paypal, etc)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.6",
+              "Gestión básica de inventarios"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.7",
+              "Capacitación sobre gestión de productos"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.8",
+              "Análisis mensual del rendimiento"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.9",
+              "Optimización SEO"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.10",
+              "Optimización SEM"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.11",
+              "Publicidad Paga (ADS)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.12",
+              "Análisis de tráfico"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.13",
+              "Entrega de informes mensuales"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.14",
+              "Reporte mensual de análisis de tráfico"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.15",
+              "Boton de WhatssApp"
+            ),
+            t(
+              "services.servicesData.webDev.plans.ecommerce.features.16",
+              "Hosting y dominio (.com) por 1 año"
+            ),
           ],
-          time: "Tiempo estimado de entrega: 2-5 meses",
+          time: t(
+            "services.servicesData.webDev.plans.ecommerce.time",
+            "Tiempo estimado de entrega: 2-5 meses"
+          ),
           icon: <ShoppingCart className="w-8 h-8 text-[#FF8FB1]" />,
         },
         {
-          name: "Agendamiento",
+          name: t(
+            "services.servicesData.webDev.plans.scheduling.name",
+            "Agendamiento"
+          ),
           price: "$1.035",
-          description:
-            "Creación de un sistema para agendar citas o reservas con integración a pasarelas de pago.",
+          description: t(
+            "services.servicesData.webDev.plans.scheduling.description",
+            "Creación de un sistema para agendar citas o reservas con integración a pasarelas de pago."
+          ),
           features: [
-            "Hasta 3 - 5 páginas",
-            "Copywriting",
-            "Diseño adaptado a moviles",
-            "Diseño personalizado (UX/UI)",
-            "Sistema de agendamiento",
-            "Integración con calendario y pasarela de pago",
-            "Notificaciones automáticas por email o SMS",
-            "Análisis mensual del uso del sistema",
-            "Optimización SEO",
-            "Analisis de trafico",
-            "Publicidad Paga (ADS)",
-            "Entrega de informes mensuales",
-            "Boton de WhatssApp",
-            "Hosting y dominio (.com) por 1 año",
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.0",
+              "Hasta 3 - 5 páginas"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.1",
+              "Copywriting"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.2",
+              "Diseño adaptado a moviles"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.3",
+              "Diseño personalizado (UX/UI)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.4",
+              "Sistema de agendamiento"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.5",
+              "Integración con calendario y pasarela de pago"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.6",
+              "Notificaciones automáticas por email o SMS"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.7",
+              "Análisis mensual del uso del sistema"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.8",
+              "Optimización SEO"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.9",
+              "Analisis de trafico"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.10",
+              "Publicidad Paga (ADS)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.11",
+              "Entrega de informes mensuales"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.12",
+              "Boton de WhatssApp"
+            ),
+            t(
+              "services.servicesData.webDev.plans.scheduling.features.13",
+              "Hosting y dominio (.com) por 1 año"
+            ),
           ],
-          time: "Tiempo estimado de entrega: 2-6 meses",
+          time: t(
+            "services.servicesData.webDev.plans.scheduling.time",
+            "Tiempo estimado de entrega: 2-6 meses"
+          ),
           icon: <Calendar className="w-8 h-8 text-[#FF8FB1]" />,
         },
         {
-          name: "Software (APP Web)",
+          name: t(
+            "services.servicesData.webDev.plans.software.name",
+            "Software (APP Web)"
+          ),
           price: "$1,935",
-          description:
-            "Desarrollo personalizado de una aplicación web que cumpla con necesidades específicas del cliente.",
+          description: t(
+            "services.servicesData.webDev.plans.software.description",
+            "Desarrollo personalizado de una aplicación web que cumpla con necesidades específicas del cliente."
+          ),
           features: [
-            "Hasta 5 - 7 páginas",
-            "Copywriting",
-            "Diseño personalizado (UX/UI)",
-            "Diseño adaptado a moviles",
-            "Actualizaciones regulares según las necesidades del cliente",
-            "Publicidad Paga (ADS)",
-            "Soporte técnico",
-            "ChatBox con integraciòn a Whatsapp",
-            "Hosting y dominio (.com) por 1 año",
+            t(
+              "services.servicesData.webDev.plans.software.features.0",
+              "Hasta 5 - 7 páginas"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.1",
+              "Copywriting"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.2",
+              "Diseño personalizado (UX/UI)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.3",
+              "Diseño adaptado a moviles"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.4",
+              "Actualizaciones regulares según las necesidades del cliente"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.5",
+              "Publicidad Paga (ADS)"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.6",
+              "Soporte técnico"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.7",
+              "ChatBox con integraciòn a Whatsapp"
+            ),
+            t(
+              "services.servicesData.webDev.plans.software.features.8",
+              "Hosting y dominio (.com) por 1 año"
+            ),
           ],
-          time: "Tiempo estimado de entrega: 4-12 meses",
+          time: t(
+            "services.servicesData.webDev.plans.software.time",
+            "Tiempo estimado de entrega: 4-12 meses"
+          ),
           icon: <Laptop className="w-8 h-8 text-[#FF8FB1]" />,
         },
         {
-          name: "Desarrollo Personalizado",
-          price: "Consultar",
-          description:
-            "Ofrecemos un desarrollo completamente personalizado que se adapta a las necesidades específicas de cada cliente. El precio se determinará en función de la complejidad y alcance del proyecto.",
+          name: t(
+            "services.servicesData.webDev.plans.custom.name",
+            "Desarrollo Personalizado"
+          ),
+          price: t(
+            "services.servicesData.webDev.plans.custom.price",
+            "Consultar"
+          ),
+          description: t(
+            "services.servicesData.webDev.plans.custom.description",
+            "Ofrecemos un desarrollo completamente personalizado que se adapta a las necesidades específicas de cada cliente. El precio se determinará en función de la complejidad y alcance del proyecto."
+          ),
           features: [
-            "Diseño a medida que refleja la identidad de tu marca",
-            "Interfaz responsiva optimizada para dispositivos móviles",
-            "Actualizaciones periódicas según las necesidades cambiantes del cliente",
-            "Integración de base de datos para gestión eficiente de información",
-            "Optimización SEO para mejorar la visibilidad en buscadores",
-            "Gestión de publicidad paga (ADS) para maximizar el alcance",
-            "Soporte técnico continuo para resolver cualquier inconveniente",
-            "Hosting y dominio (.com) incluido por 1 año",
+            t(
+              "services.servicesData.webDev.plans.custom.features.0",
+              "Diseño a medida que refleja la identidad de tu marca"
+            ),
+            t(
+              "services.servicesData.webDev.plans.custom.features.1",
+              "Interfaz responsiva optimizada para dispositivos móviles"
+            ),
+            t(
+              "services.servicesData.webDev.plans.custom.features.2",
+              "Actualizaciones periódicas según las necesidades cambiantes del cliente"
+            ),
+            t(
+              "services.servicesData.webDev.plans.custom.features.3",
+              "Integración de base de datos para gestión eficiente de información"
+            ),
+            t(
+              "services.servicesData.webDev.plans.custom.features.4",
+              "Optimización SEO para mejorar la visibilidad en buscadores"
+            ),
+            t(
+              "services.servicesData.webDev.plans.custom.features.5",
+              "Gestión de publicidad paga (ADS) para maximizar el alcance"
+            ),
+            t(
+              "services.servicesData.webDev.plans.custom.features.6",
+              "Soporte técnico continuo para resolver cualquier inconveniente"
+            ),
+            t(
+              "services.servicesData.webDev.plans.custom.features.7",
+              "Hosting y dominio (.com) incluido por 1 año"
+            ),
           ],
-          time: "El tiempo estimado de entrega varía según la complejidad del proyecto.",
+          time: t(
+            "services.servicesData.webDev.plans.custom.time",
+            "El tiempo estimado de entrega varía según la complejidad del proyecto."
+          ),
           icon: <ShieldIcon className="w-8 h-8 text-[#FF8FB1]" />,
         },
       ],
       note: [
         {
           id: 1,
-          frase: "Los Precios varias segun la necesidad del tiempo, ",
+          frase: t(
+            "services.servicesData.webDev.note.0",
+            "Los Precios varias segun la necesidad del tiempo, "
+          ),
         },
         {
           id: 2,
-          frase:
-            "requerimientos específicos, complejidad del diseño y funcionalidades ",
+          frase: t(
+            "services.servicesData.webDev.note.1",
+            "requerimientos específicos, complejidad del diseño y funcionalidades "
+          ),
         },
         {
           id: 3,
-          frase:
-            "adicionales, ofrecemos opciones de pago flexibles y paquetes de ",
+          frase: t(
+            "services.servicesData.webDev.note.2",
+            "adicionales, ofrecemos opciones de pago flexibles y paquetes de "
+          ),
         },
         {
           id: 4,
-          frase:
-            "mantenimiento. Contáctanos para una cotización personalizada.. ",
+          frase: t(
+            "services.servicesData.webDev.note.3",
+            "mantenimiento. Contáctanos para una cotización personalizada.. "
+          ),
         },
       ],
     },

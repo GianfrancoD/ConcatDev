@@ -1,10 +1,169 @@
 import { Check, ChevronRight, Library, Wallet, X } from "lucide-react";
 import React from "react";
-import { cost } from "./data/costData.tsx";
-// import { useLanguageContext } from "../../../provider.tsx";
+// import { cost } from "./data/costData.tsx";
+import { useLanguageContext } from "../../../provider.tsx";
+import { CostAditional } from "./interfaces/costAdicional.tsx";
 
 export const ServiceModal = ({ service, onClose }) => {
-  // const { t } = useLanguageContext();
+  const { t } = useLanguageContext();
+
+  const cost: CostAditional[] = [
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.0.label",
+        "Diseño Moderno"
+      ),
+      included: true,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.1.label",
+        "Hosting"
+      ),
+      included: true,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.2.label",
+        "Dominio"
+      ),
+      included: true,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.3.label",
+        "Publicidad Paga (ADS)"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.4.label",
+        "Carrito de compras"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.5.label",
+        "Formulario de Registro y Login de usuarios"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.6.label",
+        "Pasarela de Pago"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.7.label",
+        "Formularios de Contacto"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.8.label",
+        "SEO (Posicionamiento Orgánico)"
+      ),
+      included: true,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.9.label",
+        "SEM (Posicionamiento Pago)"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.10.label",
+        "Reservas y Agendamientos"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.11.label",
+        "Comentarios y Reseñas"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.12.label",
+        "Encuestas y Feedback"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.13.label",
+        "Notificaciones automáticas por email o SMS"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.14.label",
+        "Integración con redes sociales"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.15.label",
+        "Integración para Google Maps"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.16.label",
+        "ChatBox"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.17.label",
+        "Botón de Whatsapp"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.18.label",
+        "Reporte mensual de análisis de tráfico"
+      ),
+      included: true,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.19.label",
+        "Entregas de informes Mensual"
+      ),
+      included: true,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.20.label",
+        "ChatBox con Integración a Whatsapp"
+      ),
+      included: false,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.21.label",
+        "Dashboard"
+      ),
+      included: false,
+    },
+  ];
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 p-4">
       <div className="bg-[#312760] rounded-2xl w-full max-w-6xl overflow-hidden shadow-2xl">
@@ -78,7 +237,10 @@ export const ServiceModal = ({ service, onClose }) => {
                     </div>
                   )}
                   <button className="w-full flex items-center justify-evenly px-4 py-3 rounded-lg bg-gradient-to-b to-[#FCAE60] from-[#FF8FB1] text-[#312760] font-medium hover:to-[#ffa348] hover:from-[#ff78a0] transition-all transform hover:scale-105">
-                    Solicitar Cotización
+                    {t(
+                      "services.servicesData.webDev.plans.landingPage.btService",
+                      "Solicitar Cotización"
+                    )}
                     <ChevronRight className="w-7 h-7 text-orange-600 mr-4" />
                   </button>
                 </div>
@@ -90,7 +252,10 @@ export const ServiceModal = ({ service, onClose }) => {
               <div className="flex items-center mb-6">
                 <Library className="w-8 h-8 text-[#ff78a0] mr-4" />
                 <h4 className="text-2xl font-semibold text-[#ffa348]">
-                  Costos Adicionales
+                  {t(
+                    "services.servicesData.webDev.note4",
+                    "Costos Adicionales"
+                  )}
                 </h4>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -104,7 +269,10 @@ export const ServiceModal = ({ service, onClose }) => {
                     <span className="text-gray-300">{items.label}</span>
                     {items.included && (
                       <span className="bg-[#FCAE60]/20 text-[#FCAE60] text-xs py-1 px-2 rounded-full">
-                        Incluido
+                        {t(
+                          "services.servicesData.webDev.incluidos",
+                          "Incluido"
+                        )}
                       </span>
                     )}
                     {items.required && (
@@ -116,8 +284,11 @@ export const ServiceModal = ({ service, onClose }) => {
                 ))}
               </div>
               <p className="mt-6 text-sm text-gray-400 italic">
-                Nota: Los precios pueden variar según la complejidad del
-                proyecto y los requerimientos específicos.
+                {t("services.servicesData.webDev.note2.1", "Nota")}:{" "}
+                {t(
+                  "services.servicesData.webDev.note2.0",
+                  "Los precios pueden variar según la complejidad del proyecto y los requerimientos específicos."
+                )}
               </p>
             </div>
           )}
@@ -125,7 +296,7 @@ export const ServiceModal = ({ service, onClose }) => {
             <div className="flex items-center mb-4">
               <Wallet className="w-6 h-6 text-[#ff78a0] mr-3" />
               <h4 className="text-lg font-semibold text-[#FCAE60]">
-                Nota Importante
+                {t("services.servicesData.webDev.note3", "Nota Importante")}
               </h4>
             </div>
             <p className="text-gray-300">

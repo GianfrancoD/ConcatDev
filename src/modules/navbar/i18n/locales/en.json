@@ -30,13 +30,85 @@
     "heroBt": { "btHero": "Start your journey" }
   },
   "projects": {
-    "title": "Our Projects",
+    "title": "Our",
+    "title2": "Projects",
     "subtitle": "Innovative digital solutions designed with precision and focus on user experience",
     "viewAll": "View all projects",
     "viewDetails": "View details",
     "visit": "Visit project",
     "technologies": "Technologies",
-    "description": "Description"
+    "description": "Description",
+    "items": [
+      {
+        "id": "1",
+        "title": "Software Odontológico",
+        "category": "Software Development",
+        "description": "Dentixa is a dental software designed to be easy for both clients and dentists, and to save time. The front-end technology used ReactJS with Typescript and MaterialUI, as well as APIs for making HTTP requests, while the back-end used Python, Flask, and PostgreSQL databases with SQLAlchemy ORM and MVC software architecture.",
+        "link": "https://dentixa-gestion.vercel.app/",
+        "year": "2024",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Material UI",
+          "Python",
+          "Flask",
+          "PostgreSQL",
+          "SQLAlchemy",
+          "MVC"
+        ],
+        "color": "#6366f1"
+      },
+      {
+        "id": "2",
+        "title": "Leading Page Inmobiliaria",
+        "category": "Web Development",
+        "description": "The real estate leading page was created especially for people who are in the real estate sector, with which their work can be facilitated, using ReactJS Technologies with Typescript with TailwindCSS, API consumption and Screaming Architecture.",
+        "link": "https://inmobiliaria-web-nine.vercel.app/",
+        "year": "2025",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "REST API",
+          "Screaming Architecture"
+        ],
+        "color": "#f59e0b"
+      },
+      {
+        "id": "3",
+        "title": "Leading Page Envíos ZOOM",
+        "category": "Web Development",
+        "description": "This page is especially for ZOOM with which you can send packages and you can track them, with which ReactJS Technologies with Typescript and TailwindCSS were used for custom designs, API consumption and Design Patterns such as Screaming Architecture for greater order as well as Scalability, Maintainability, and Reusability, it was also used as a PostgreSQL database, and in the backend Flask and with ORM SQLAlchemy for cleaner code, Package Shipment Tracking and a Calculator were also created for the ease of users.",
+        "link": "https://enviointernacionales.com/",
+        "year": "2025",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "REST API",
+          "PostgreSQL",
+          "Flask",
+          "SQLAlchemy"
+        ],
+        "color": "#ec4899"
+      },
+      {
+        "id": "4",
+        "title": "Leading Page Envíos HD",
+        "category": "Web Development",
+        "description": "This is a Leading Page specifically for Envioshd, with a structure identical to Zoom's but a more striking and distinctive design. It uses ReactJS with Typescript, TailwindCSS, API consumption, and design patterns such as Screaming Architecture for greater order, scalability, maintainability, and reusability. Tracking (shipment tracking) and a price and size calculator were also created for greater ease for customers.",
+        "link": "https://envioshd.com/",
+        "year": "2025",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "REST API",
+          "Screaming Architecture"
+        ],
+        "color": "#0ea5e9"
+      }
+    ]
   },
   "blog": {
     "title": "Our Blog",
@@ -155,7 +227,7 @@
             "price": "$1,035",
             "description": "Creation of a system to schedule appointments or reservations with payment gateway integration.",
             "features": [
-              "Up to 3 - 5 pages",
+              "Up to 3 -  5 pages",
               "Copywriting",
               "Mobile-responsive design",
               "Custom design (UX/UI)",
@@ -211,7 +283,41 @@
           "specific requirements, design complexity, and additional ",
           "functionalities. We offer flexible payment options and maintenance ",
           "packages. Contact us for a personalized quote."
-        ]
+        ],
+        "note2": [
+          "Prices may vary depending on the complexity of the project and specific requirements.",
+          "Note"
+        ],
+        "note3": "Note Important",
+        "note4": "Additional Costs",
+        "CostAddicional": [
+          { "label": "Modern Design", "included": true },
+          { "label": "Hosting", "included": true },
+          { "label": "Domain", "included": true },
+          { "label": "Paid Advertising (ADS)", "included": false },
+          { "label": "Shopping Cart", "included": false },
+          { "label": "User  Registration and Login Form", "included": false },
+          { "label": "Payment Gateway", "included": false },
+          { "label": "Contact Forms", "included": false },
+          { "label": "SEO (Organic Positioning)", "included": true },
+          { "label": "SEM (Paid Positioning)", "included": false },
+          { "label": "Reservations and Scheduling", "included": false },
+          { "label": "Comments and Reviews", "included": false },
+          { "label": "Surveys and Feedback", "included": false },
+          {
+            "label": "Automatic Email or SMS Notifications",
+            "included": false
+          },
+          { "label": "Social Media Integration", "included": false },
+          { "label": "Google Maps Integration", "included": false },
+          { "label": "ChatBox", "included": false },
+          { "label": "WhatsApp Button", "included": false },
+          { "label": "Monthly Traffic Analysis Report", "included": true },
+          { "label": "Monthly Report Delivery", "included": true },
+          { "label": "ChatBox with WhatsApp Integration", "included": false },
+          { "label": "Dashboard", "included": false }
+        ],
+        "incluidos": "Included"
       }
     }
   },
@@ -237,7 +343,7 @@
         "description": "We offer complete solutions that cover all aspects of modern branding, from conceptualization to execution."
       }
     },
-    "finalDescription": "With concatDev we create innovative digital experiences that transform your brand and drive your growth. We adapt to the latest technologies to offer you tailored solutions that generate real results.",
+    "finalDescription": "With ConcatDev we create innovative digital experiences that transform your brand and drive your growth. We adapt to the latest technologies to offer you tailored solutions that generate real results.",
     "cta": "Boost your success with ConcatDev"
   },
   "servicesPlans": {
@@ -245,7 +351,8 @@
     "viewPlans": "View Plans"
   },
   "howWeWork": {
-    "title": "How We Work",
+    "title": "How",
+    "title2": "We Work",
     "subtitle": "Our process is designed to ensure transparency, efficiency, and exceptional results in every project.",
     "steps": {
       "step1": {
@@ -336,7 +443,7 @@
         "title": "Actionable Data",
         "description": "Landing pages provide valuable insights about your customers, allowing you to continuously optimize your strategies."
       },
-      "acceleratedGrowth": {
+      " acceleratedGrowth": {
         "title": "Accelerated Growth",
         "description": "A solid web presence is the catalyst for exponential growth in the digital era."
       }

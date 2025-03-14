@@ -95,7 +95,8 @@
     "viewPlans": "Ver Planes"
   },
   "howWeWork": {
-    "title": "Cómo Trabajamos",
+    "title": "Cómo",
+    "title2": "Trabajamos",
     "subtitle": "Nuestro proceso está diseñado para garantizar transparencia, eficiencia y resultados excepcionales en cada proyecto.",
     "steps": {
       "step1": {

@@ -26,6 +26,7 @@ import dentixa from "../../assets/dentixa.png";
 import inmobiliaria from "../../assets/inmobiliaria.png";
 import zoom from "../../assets/zoom.png";
 import envioshd from "../../assets/envioshd.png";
+import { useLanguageContext } from "../../provider";
 // Definición de la interfaz para los proyectos
 interface Project {
   id: string;
@@ -47,6 +48,7 @@ export default function ProjectsSlider() {
   const isTablet = useMediaQuery("(max-width: 1024px)");
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { t } = useLanguageContext();
 
   // Referencia para el scroll horizontal
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -64,8 +66,10 @@ export default function ProjectsSlider() {
       title: "Software Odontológico",
       category: "Software Development",
       image: dentixa,
-      description:
-        "Dentixa es un software para odontólogos creado para la facilidad de los clientes, dentistas y ahorrar tiempo. En la tecnología se utilizó en el Frontend: ReactJS con Typescript, MaterialUI como también el consumo de APIS para hacer peticiones HTTP, en el Backend: se utilizó Python, Flask y como Base de datos PostgreSQL con ORM SQLAlchemy y Arquitectura de Software MVC",
+      description: t(
+        "projects.items.0.description",
+        "Dentixa es un software para odontólogos creado para la facilidad de los clientes, dentistas y ahorrar tiempo. En la tecnología se utilizó en el Frontend: ReactJS con Typescript, MaterialUI como también el consumo de APIS para hacer peticiones HTTP, en el Backend: se utilizó Python, Flask y como Base de datos PostgreSQL con ORM SQLAlchemy y Arquitectura de Software MVC"
+      ),
       link: "https://dentixa-gestion.vercel.app/",
       year: "2024",
       technologies: [
@@ -85,8 +89,10 @@ export default function ProjectsSlider() {
       title: "Leading Page Inmobiliaria",
       category: "Web Development",
       image: inmobiliaria,
-      description:
-        "Se creó la leading page inmobiliaria especialmente pensado para personas que están en el ramo de la inmobiliaria con la cual se le puede facilitar su trabajo con lo que se utilizó las Tecnologías ReactJS con Typescript con TailwindCSS, consumos de APIS y Screaming Architecture",
+      description: t(
+        "projects.items.1.description",
+        "Se creó la leading page inmobiliaria especialmente pensado para personas que están en el ramo de la inmobiliaria con la cual se le puede facilitar su trabajo con lo que se utilizó las Tecnologías ReactJS con Typescript con TailwindCSS, consumos de APIS y Screaming Architecture"
+      ),
       link: "https://inmobiliaria-web-nine.vercel.app/",
       year: "2025",
       technologies: [
@@ -103,8 +109,10 @@ export default function ProjectsSlider() {
       title: "Leading Page Envíos ZOOM",
       category: "Web Development",
       image: zoom,
-      description:
-        "En esta página es especialmente para ZOOM con la cual se puede hacer envíos de paquetes y se puede hacer seguimiento de los mismos, con lo que se utilizó las Tecnologías ReactJS con Typescript y TailwindCSS para diseños personalizados, consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como también Escalabilidad, Mantenibilidad, y Reusabilidad, también se utilizó como base de datos PostgreSQL, y en el backend Flask y con ORM SQLAlchemy para un código más limpio.",
+      description: t(
+        "projects.items.2.description",
+        "En esta página es especialmente para ZOOM con la cual se puede hacer envíos de paquetes y se puede hacer seguimiento de los mismos, con lo que se utilizó las Tecnologías ReactJS con Typescript y TailwindCSS para diseños personalizados, consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como también Escalabilidad, Mantenibilidad, y Reusabilidad, también se utilizó como base de datos PostgreSQL, y en el backend Flask y con ORM SQLAlchemy para un código más limpio, tambien se creo Seguimiento de Envios de Paqueteria (Tracking) y una Calculadora para la facilidad de los usuarios."
+      ),
       link: "https://enviointernacionales.com/",
       year: "2025",
       technologies: [
@@ -123,8 +131,10 @@ export default function ProjectsSlider() {
       title: "Leading Page Envíos HD",
       category: "Web Development",
       image: envioshd,
-      description:
-        "Es una Leading Page especialmente para la Envioshd con una estructura idéntica a la de ZOOM pero con un diseño más llamativo y diferente. Uso de ReactJS con Typescript, TailwindCSS, Consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como también Escalabilidad, Mantenibilidad y Reusabilidad",
+      description: t(
+        "projects.items.3.description",
+        "Es una Leading Page especialmente para la Envioshd con una estructura idéntica a la de ZOOM pero con un diseño más llamativo y diferente. Uso de ReactJS con Typescript, TailwindCSS, Consumos de APIS y Patrones de diseño como Screaming Architecture para un mayor orden como también Escalabilidad, Mantenibilidad y Reusabilidad, se creo tambien Tracking (Seguimiento de envios) y una Calculadora de precios y sus dimensiones para una mayor facilidad para su cliente."
+      ),
       link: "https://envioshd.com/",
       year: "2025",
       technologies: [
@@ -251,9 +261,9 @@ export default function ProjectsSlider() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Nuestros{" "}
+              {t("projects.title", "Nuestros")}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fcae60] to-[#ff8fb1]">
-                Proyectos
+                {t("projects.title2", "Proyectos")}
               </span>
             </motion.h2>
             <motion.p
@@ -262,8 +272,10 @@ export default function ProjectsSlider() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Soluciones digitales innovadoras diseñadas con precisión y enfoque
-              en la experiencia del usuario.
+              {t(
+                "projects.subtitle",
+                "Soluciones digitales innovadoras diseñadas con precisión y enfoque en la experiencia del usuario."
+              )}
             </motion.p>
           </div>
 
@@ -466,6 +478,7 @@ function ProjectCard({
   mouseY,
 }: ProjectCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguageContext();
   const isInView = useInView(cardRef, { once: false, amount: 0.3 });
 
   // Transformaciones basadas en la posición del mouse
@@ -577,7 +590,7 @@ function ProjectCard({
               className="text-sm font-medium text-white flex items-center gap-1 group"
               whileHover={{ x: 3 }}
             >
-              Ver detalles
+              {t("projects.viewDetails", "Ver detalles")}
               <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
             </motion.button>
 
@@ -616,6 +629,7 @@ interface ProjectModalProps {
 function ProjectModal({ project, onClose }: ProjectModalProps) {
   // Referencia para detectar clics fuera del modal
   const modalContentRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguageContext();
 
   return (
     <motion.div
@@ -690,7 +704,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
           {/* Tecnologías */}
           <div className="mb-6">
             <h3 className="text-sm font-medium text-white/70 uppercase tracking-wider mb-3">
-              Tecnologías
+              {t("projects.technologies", "Tecnologías")}
             </h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, i) => (
@@ -707,7 +721,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
           {/* Descripción */}
           <div className="mb-8">
             <h3 className="text-sm font-medium text-white/70 uppercase tracking-wider mb-3">
-              Descripción
+              {t("projects.description", "Descripción")}
             </h3>
             <p className="text-white/80 leading-relaxed">
               {project.description}
@@ -722,7 +736,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#fcae60] to-[#ff8fb1] text-[#0f0f13] font-medium hover:shadow-lg transition-all duration-300 group"
             >
-              Visitar proyecto
+              {t("projects.visit", "Visitar proyecto")}
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </div>

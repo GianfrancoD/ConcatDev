@@ -87,7 +87,7 @@ export const Navbar = () => {
               href="#contact"
               className="px-4 py-2 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 text-sm font-medium hover:from-[#ffa851] hover:to-[#ff6492] transition-all"
             >
-              Empezar
+              {t("nav.getStarted", "Empezar")}
             </a>
           </div>
           <div className="md:hidden">

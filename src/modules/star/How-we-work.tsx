@@ -70,28 +70,28 @@ export default function ComoTrabajamos() {
       id: 4,
       icon: <FileCheck className="h-10 w-10 text-orange-400" />,
       title: t(
-        "howWeWork.steps.step6.title",
+        "howWeWork.steps.step4.title",
         "Revisión, Ajustes y Refinamiento"
       ),
       description: t(
-        "howWeWork.steps.step6.shortDescription",
+        "howWeWork.steps.step4.shortDescription",
         "Refinamos el proyecto basándonos en tus comentarios."
       ),
       details: t(
-        "howWeWork.steps.step6.fullDescription",
+        "howWeWork.steps.step4.fullDescription",
         "Presentamos el proyecto para tu revisión detallada. Recogemos tus comentarios, realizamos los ajustes necesarios."
       ),
     },
     {
       id: 5,
       icon: <Bug className="h-10 w-10 text-orange-400" />,
-      title: t("howWeWork.steps.step6.title", "Testeos, Debugs y Optimización"),
+      title: t("howWeWork.steps.step5.title", "Testeos, Debugs y Optimización"),
       description: t(
-        "howWeWork.steps.step6.shortDescription",
+        "howWeWork.steps.step5.shortDescription",
         "Identificamos y corregimos errores técnicos."
       ),
       details: t(
-        "howWeWork.steps.step6.fullDescription",
+        "howWeWork.steps.step5.fullDescription",
         "Realizamos pruebas unitarias, de integración y de rendimiento. Identificamos y corregimos cualquier error encontrado durante las pruebas para asegurar un producto estable y eficiente."
       ),
     },

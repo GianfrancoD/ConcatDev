@@ -41,10 +41,10 @@ export default function Services() {
           features: [
             "Evaluación de la velocidad de carga de la página.",
             "Optimización de imágenes y recursos.",
-            "Análisis de palabras clave.",
-            "Optimización on-page (títulos, meta descripciones).",
+            "Análisis de palabras clave básico.",
+            "Optimización on-page y off-page",
             "Evaluación de la navegación y estructura del menú.",
-            "Verificación de certificados SSL.",
+            "Verificación de certificados SSL",
             "Evaluación de la calidad y relevancia del contenido.",
           ],
           icon: <Users className="w-8 h-8 text-blue-400" />,
@@ -57,14 +57,14 @@ export default function Services() {
           features: [
             "Análisis de la velocidad de carga de la página.",
             "Optimización de imágenes y recursos.",
-            "Análisis de palabras clave y optimización on-page.",
+            "Análisis de palabras clave y optimización on-page y off-page.",
             "Estructura de URL y enlaces internos.",
             "Evaluación de la navegación y estructura del menú.",
             "Diseño responsivo y compatibilidad móvil.",
             "Verificación de certificados SSL y vulnerabilidades de seguridad.",
             "Evaluación de la calidad y relevancia del contenido.",
             "Análisis de fuentes de tráfico y comportamiento del usuario.",
-            "Análisis de la tasa de conversión y efectividad de las llamadas a la acción (CTA).",
+            "Análisis de la tasa de conversión y efectividad de las llamadas a la acción.",
           ],
           icon: <Gem className="w-8 h-8 text-blue-400" />,
         },
@@ -91,13 +91,12 @@ export default function Services() {
         },
         {
           step: "Recopilación de Datos",
-          description:
-            "Uso de herramientas de análisis (Google Analytics, SEMrush, etc.) para recopilar datos.",
+          description: "Uso de herramientas de análisis para recopilar datos.",
         },
         {
           step: "Análisis",
           description:
-            "Evaluación de cada componente mencionado anteriormente.",
+            "Evaluación de cada componente mencionado anteriormente utilizando herramientas.",
         },
         {
           step: "Informe",

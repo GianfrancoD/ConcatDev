@@ -7,9 +7,7 @@ type LanguageContextType = {
   t: (key: string, defaultValue?: string) => string;
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
-);
+const LanguageContext = createContext<LanguageContextType | undefined>(null);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,

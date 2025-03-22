@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 type Lenguaje = "es" | "en";
 
@@ -8,17 +8,15 @@ export const useTranslate = (initialLenguaje: Lenguaje = "es") => {
   console.log("Idioma actual:", lenguaje);
 
   useEffect(() => {
-    const fetchTranslations = async () => {
+    (async () => {
       try {
         const module = await import(`../i18n/locales/${lenguaje}.json`);
         setTranslations(module.default);
         console.log("Traducciones cargadas:", module.default);
-      } catch (error) {
-        console.error("Error loading translations:", error);
+      } catch (err) {
+        console.error("Error al cargar traducciones:", err);
       }
-    };
-
-    fetchTranslations();
+    })();
   }, [lenguaje]);
 
   const changeLanguage = useCallback((lenguajeNew: Lenguaje) => {
@@ -29,10 +27,10 @@ export const useTranslate = (initialLenguaje: Lenguaje = "es") => {
     (key: string, defaultValue?: string) => {
       const keys = key.split(".");
       const value = keys.reduce((acc, key) => {
-        if (typeof acc === "object") return acc[key];
-        else return defaultValue || key;
+        if (typeof acc === "object" && key in acc) return acc[key];
+        return defaultValue || key;
       }, translations);
-      return typeof value === "string" ? value : defaultValue || key;
+      return value ? value : defaultValue || key;
     },
     [translations]
   );

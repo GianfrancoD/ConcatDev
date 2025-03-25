@@ -14,20 +14,10 @@ import {
   NotepadText,
   PersonStanding,
 } from "lucide-react";
-// import logo from "../../assets/logobrandaxiom.png";
 import logo from "../../assets/concatdev2.png";
 import LanguageSelector from "./components/lenguajeSelector/lenguaje.tsx";
 import { useLanguageContext } from "../../provider.tsx";
 import LanguageSelectorAnimated from "./components/lenguajeSelector/lenguajeanimado.tsx";
-
-// const navItems = [
-//   { name: "Inicio", href: "/", icon: Home },
-//   { name: "Servicios", href: "servicios", icon: Briefcase },
-//   { name: "Proyectos", href: "projects", icon: Layout },
-//   { name: "Blog", href: "blog", icon: NotepadText },
-//   { name: "Testimonios", href: "testimonio", icon: PersonStanding },
-//   { name: "Contactos", href: "footer", icon: Phone },
-// ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,13 +50,12 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0">
-            {/* <a
-              href="/"
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
-            >
-              BrandAxiom
-            </a> */}
-            <img src={logo} alt="" className="h-[15vh] w-auto" />
+            <img
+              src={logo}
+              alt="Paginas modernas, optimizadas, realizadas por profesionales juntos con analisis de keywords y analisis de traficos, mas posicionamientos organicos, siempre con gente especializada. "
+              className="h-full w-[10.5rem]"
+              loading="lazy"
+            />
           </div>
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navItems.map((item) => (

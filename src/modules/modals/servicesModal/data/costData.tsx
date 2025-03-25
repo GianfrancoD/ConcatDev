@@ -8,9 +8,18 @@ export const useCostData = () => {
     {
       label: t(
         "services.servicesData.webDev.CostAddicional.0.label",
+        "Leading Page"
+      ),
+      included: true,
+      price: 300,
+    },
+    {
+      label: t(
+        "services.servicesData.webDev.CostAddicional.0.label",
         "Diseño Moderno"
       ),
       included: true,
+      price: 100,
     },
     {
       label: t(

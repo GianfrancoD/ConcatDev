@@ -1,13 +1,55 @@
-import { Check, ChevronRight, Library, Wallet, X } from "lucide-react";
-import React from "react";
-// import { cost } from "./data/costData.tsx";
+// ServiceModal.tsx (modificado)
+import {
+  Check,
+  ChevronRight,
+  Library,
+  Plus,
+  Wallet,
+  X,
+  CircleMinus,
+} from "lucide-react";
+import React, { useState } from "react";
 import { useLanguageContext } from "../../../provider.tsx";
-// import { CostAditional } from "./interfaces/costAdicional.tsx";
 import { useCostData } from "./data/costData.tsx";
 
 export const ServiceModal = ({ service, onClose }) => {
+  const [hasQuote, setHasQuote] = useState(false);
+  const [quoteItems, setQuoteItems] = useState([]);
   const cost = useCostData();
   const { t } = useLanguageContext();
+
+  const calculateTotal = () => {
+    return quoteItems.reduce((sum, item) => sum + item.price, null);
+  };
+  const whatsappNumber = "+5804124122809";
+  const whatsappMessage = encodeURIComponent(
+    `¡Hola! Estoy interesado en obtener más información sobre esta cotización:\n ${quoteItems
+      .map((item) => `${item.label} - $${item.price}`)
+      .join("\n")} \nTotal: $${calculateTotal()}`
+  );
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const handleAddCost = (costItem) => {
+    setQuoteItems((prevItems) => {
+      const itemExists = prevItems.find(
+        (item) => item.label === costItem.label
+      );
+      if (!itemExists) {
+        return [...prevItems, costItem];
+      }
+      return prevItems;
+    });
+  };
+
+  const handleRemoveCost = (itemToRemove) => {
+    setQuoteItems((prevItems) =>
+      prevItems.filter((item) => item.label !== itemToRemove.label)
+    );
+  };
+
+  const handleCreateQuote = () => {
+    setHasQuote(true);
+  };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 p-4">
@@ -35,15 +77,12 @@ export const ServiceModal = ({ service, onClose }) => {
               </p>
             </div>
           )}
-
+          {/* card modal */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {service.plans.map((plan, index) => (
               <div
                 key={index}
-                className={`bg-[#1A1438] rounded-lg overflow-hidden ${
-                  index === 1 &&
-                  "border-[#FCAE60] border-x-[#FF8FB1] border backdrop-blur-sm"
-                }`}
+                className={`bg-[#1A1438] rounded-lg overflow-hidden `}
               >
                 <div className="p-6 border-b border-gray-700">
                   <div className="flex items-center justify-between mb-4 ">
@@ -64,6 +103,7 @@ export const ServiceModal = ({ service, onClose }) => {
                   </div>
                   <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
+                {/* Cards Modals */}
                 <div className="p-6">
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, fIndex) => (
@@ -91,7 +131,51 @@ export const ServiceModal = ({ service, onClose }) => {
                 </div>
               </div>
             ))}
+            {/* Nueva cotizacion */}
+            {hasQuote && (
+              <div className="bg-[#1A1438] rounded-lg overflow-hidden p-6">
+                <h4 className="flex justify-end text-2xl font-bold bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] bg-clip-text text-transparent mb-4">
+                  Cotización
+                </h4>
+                <div className="p-6 border-b border-gray-700">
+                  <span className="text-gray-300 text-sm ">
+                    Relativamente una cotizacion a la necesidad del cliente, en
+                    la cual podra tener una idea de su necesidad antes de una
+                    reunion para terminar acuerdos y terminos de su Aplicacion
+                  </span>
+                </div>
+                <br />
+                {quoteItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-between text-white mb-2"
+                  >
+                    <span>
+                      {item.label} - {item.price}
+                    </span>
+                    <button
+                      onClick={() => handleRemoveCost(item)}
+                      className="text-red-500 hover:text-red-700"
+                    >
+                      <CircleMinus />
+                    </button>
+                  </div>
+                ))}
+                <br />
+                <a
+                  className="w-full flex items-center justify-evenly px-4 py-3 rounded-lg bg-gradient-to-b to-[#FCAE60] from-[#FF8FB1] text-[#312760] font-medium hover:to-[#ffa348] hover:from-[#ff78a0] transition-all transform hover:scale-105"
+                  href={whatsappLink}
+                >
+                  {t(
+                    "services.servicesData.webDev.plans.landingPage.btService",
+                    "Solicitar Cotización"
+                  )}
+                  <ChevronRight className="w-7 h-7 text-orange-600 mr-4" />
+                </a>
+              </div>
+            )}
           </div>
+          {/* Costo Adicionales */}
           {service.title === "Web Dev" && (
             <div className="mt-8 p-6 bg-gradient-to-br from-[#312760] to-[#1A1438] rounded-lg border border-blue-500/20 shadow-lg">
               <div className="flex items-center mb-6">
@@ -104,30 +188,27 @@ export const ServiceModal = ({ service, onClose }) => {
                 </h4>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {cost.map((items, index) => (
+                {/* costo adicionales */}
+                {cost.map((item, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <Check
-                      className={`w-5 h-5 ${
-                        items.included ? "text-green-500" : "text-gray-500"
-                      }`}
-                    />
-                    <span className="text-gray-300">{items.label}</span>
-                    {items.included && (
-                      <span className="bg-[#FCAE60]/20 text-[#FCAE60] text-xs py-1 px-2 rounded-full">
-                        {t(
-                          "services.servicesData.webDev.incluidos",
-                          "Incluido"
-                        )}
-                      </span>
-                    )}
-                    {items.required && (
-                      <span className="bg-[#FF8FB1]/20 text-[#FF8FB1] text-xs py-1 px-2 rounded-full">
-                        {items.required}
-                      </span>
-                    )}
+                    <span className="text-gray-300">{item.label}</span>
+                    <button
+                      onClick={() => handleAddCost(item)}
+                      className="w-auto h-auto rounded-3xl bg-blue-500 z-50"
+                    >
+                      <Plus />
+                    </button>
                   </div>
                 ))}
               </div>
+              {!hasQuote && (
+                <button
+                  onClick={handleCreateQuote}
+                  className="px-6 py-2 rounded-full bg-gradient-to-r from-[#FCAE60] to-[#FF8FB1] text-gray-700 font-medium hover:from-[#f7a34e] hover:to-[#fb6894] transition-all transform hover:scale-105 mt-4"
+                >
+                  Cotizar
+                </button>
+              )}
               <p className="mt-6 text-sm text-gray-400 italic">
                 {t("services.servicesData.webDev.note2.1", "Nota")}:{" "}
                 {t(

@@ -164,8 +164,6 @@ export const ServiceModal = ({ service, onClose }) => {
                 <a
                   className="w-full flex items-center justify-evenly px-4 py-3 rounded-lg bg-gradient-to-b to-[#FCAE60] from-[#FF8FB1] text-[#312760] font-medium hover:to-[#ffa348] hover:from-[#ff78a0] transition-all transform hover:scale-105"
                   href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   {t(
                     "services.servicesData.webDev.plans.landingPage.btService",

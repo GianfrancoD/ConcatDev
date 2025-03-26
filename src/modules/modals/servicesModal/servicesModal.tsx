@@ -18,14 +18,15 @@ export const ServiceModal = ({ service, onClose }) => {
   const cost = useCostData();
   const { t } = useLanguageContext();
 
-  const calculateTotal = () => {
-    return quoteItems.reduce((sum, item) => sum + item.price, null);
-  };
+  // const calculateTotal = () => {
+  //   return quoteItems.reduce((sum, item) => sum + item.price, null);
+  // };
   const whatsappNumber = "+5804124122809";
   const whatsappMessage = encodeURIComponent(
-    `¡Hola! Estoy interesado en obtener más información sobre esta cotización:\n ${quoteItems
-      .map((item) => `${item.label} - $${item.price}`)
-      .join("\n")} \nTotal: $${calculateTotal()}`
+    `¡Hola!👋🏻 ConcatDev, Estoy interesado en obtener más información sobre esta cotización:\n ${
+      quoteItems.map((item) => `${item.label}`)
+      // .join("\n")} \nTotal: $${calculateTotal()}`
+    }`
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -150,9 +151,7 @@ export const ServiceModal = ({ service, onClose }) => {
                     key={index}
                     className="flex items-center justify-between text-white mb-2"
                   >
-                    <span>
-                      {item.label} - {item.price}
-                    </span>
+                    <span>{item.label}</span>
                     <button
                       onClick={() => handleRemoveCost(item)}
                       className="text-red-500 hover:text-red-700"
@@ -165,6 +164,8 @@ export const ServiceModal = ({ service, onClose }) => {
                 <a
                   className="w-full flex items-center justify-evenly px-4 py-3 rounded-lg bg-gradient-to-b to-[#FCAE60] from-[#FF8FB1] text-[#312760] font-medium hover:to-[#ffa348] hover:from-[#ff78a0] transition-all transform hover:scale-105"
                   href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {t(
                     "services.servicesData.webDev.plans.landingPage.btService",
@@ -183,18 +184,23 @@ export const ServiceModal = ({ service, onClose }) => {
                 <h4 className="text-2xl font-semibold text-[#ffa348]">
                   {t(
                     "services.servicesData.webDev.note4",
-                    "Costos Adicionales"
+                    // "Costos Adicionales"
+                    "Cotización Personalizada"
                   )}
                 </h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* costo adicionales */}
                 {cost.map((item, index) => (
-                  <div key={index} className="flex items-center space-x-2">
+                  <div
+                    key={index}
+                    className="flex items-center justify-between p-5 bg-[#1A1438] border border-[#FCAE60]/20 rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-105"
+                  >
                     <span className="text-gray-300">{item.label}</span>
                     <button
                       onClick={() => handleAddCost(item)}
-                      className="w-auto h-auto rounded-3xl bg-blue-500 z-50"
+                      // className=" rounded-3xl bg-blue-500 z-50"
+                      className="flex w-7 h-7 justify-center items-center rounded-full bg-gradient-to-r from-[#FF8FB1] to-[#FCAE60] text-white shadow hover:scale-110 transition-transform"
                     >
                       <Plus />
                     </button>
